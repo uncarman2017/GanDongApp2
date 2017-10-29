@@ -1,0 +1,360 @@
+﻿/*
+ * 所有的列表项目样式 
+ */
+ #filter{
+	 width:100%;
+	 padding:6px 15px;
+	 height:47px;
+	 position:relative;
+	 z-index: 10;
+	 text-align:left;
+	 background:url(../imgs/bgLing.jpg) left 46.5px repeat-x;
+}
+#filter span{	
+	display:inline-block;*display:inline;*zoom:1;
+	height:30px;
+	line-height:30px;
+	width:40%;/*margin:0 20px 0 0;*/
+}
+#filter span b{
+	display:inline-block;*display:inline;*zoom:1;
+	margin:0 6px 0 0;
+}
+#filter span i{
+	font-style:normal;
+	font-size:16px;
+	color:#59595c;
+}
+#filter .oneif b{
+	width:15px;
+	height:20px;
+	background:url(../imgs/point.png) 0 0 no-repeat;
+	background-size:100% 200%;
+	position:relative;top:4px;
+}
+#filter .twoif b{
+	width:14px;
+	height:13px;
+	background:url(../imgs/items.png) 0 0 no-repeat;
+	background-size:100% 200%;
+	position:relative;top:1px;
+}
+#filter .threeif{
+	width:20%;
+	/*height:24px;*/
+	padding:0 3px;
+	border:solid #acacac 1px;
+	border-radius:3px;
+	min-width:55px;
+	position:absolute;
+	right:15px;top:8px;
+	vertical-align:top;
+}
+#filter .index{ width:60%;}
+#filter .search{
+	width:100%;
+	/*height: 24px;*/
+    padding: 0 3px;
+    border: solid #acacac 1px;
+    border-radius: 3px;
+    min-width: 55px;
+	margin:3px 0 0;
+}
+#filter .search .searchInput{ width:100%; padding:0 10px;}
+#filter .threeif b 
+,#filter .search b{
+	/*width:25px;
+	height:18px;
+	background:url(../imgs/searh.png) 6px 0 no-repeat;
+	background-size:19px 18px;
+	border-left:#acacac 1px solid;
+	padding: 0 0 0 5px;
+	margin:2px 0;
+	position: absolute;
+	right: 5px;
+	z-index:999;*/
+	width: 35px;
+    height: 24px;
+    background: url(../imgs/searh.png) 4px 0 no-repeat;
+    background-size: 24px 23px;
+    border-left: #acacac 1px solid;
+    padding: 0 0 0 5px;
+    margin: 2px 0;
+    position: absolute;
+    right: -2px;
+    z-index: 999;
+}
+#filter .search b{right:5%;}
+#filter .threeif input{
+	width:28px;
+	vertical-align:top;
+	margin:3px 0;
+}
+#filter .index input{ width:90%;}
+#filter .question{
+	position: absolute;
+    right: 15px;
+    width: 30%;
+    line-height: 35px;
+    text-align: right;
+    margin: 3px 0 0;
+}
+
+.options{
+	width:100%;
+	/*border-top:solid #ccc 1px;
+	border-bottom:solid #ccc 1px;
+	position: relative;
+	top: -1px;*/
+	position: absolute;
+	z-index: 1000;
+	background: #fff;
+}
+.options .thisTitle{
+	height:42px;
+	line-height:42px;
+	padding:0 0 0 20px;
+	font-size:16px;
+	color:#000;
+	background:url(../imgs/bgLing_ccc.png) 0 41.5px repeat-x;
+}
+.thisTitle b{
+	display:inline-block;*display:inline;*zoom:1;
+	width:16px; height:16px; margin:0 6px 0 0;
+	background:url(../imgs/option.png) 0 0 no-repeat;
+	background-size:100% 100%;
+	position:relative;top:2px;
+}
+.options .items{}
+.options .items span{
+	display:inline-block;*display:inline;*zoom:1;
+	float: left;
+	width:50%;height:42px;
+	line-height:42px;
+	padding:0 0 0 20px;	
+	background:url(../imgs/bgLing_ccc.png) 0 41.5px repeat-x;
+}
+.options .items .bor{border-right:solid #ccc 1px;}
+
+#content{
+	 width:100%;
+	 padding:0 15px; 
+}
+#content .dataList{width:100%;}
+
+.dataList .list{
+	padding:12px 0px;
+	padding-left:0;
+	position:relative;
+	background:url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+}
+.dataList .listFirst{ background:none;}
+.dataList .listEnd{ padding:0; height:10px;}
+.dataList .list:first-child {background:none;}
+.round .list{ padding-left:0px; }
+.list .showImg{
+	width:24%;
+	float:left;
+}
+
+.round .list .showImg{
+	width:24%;
+	overflow:hidden;
+	margin:5px 0 0;
+}
+.list .showImg a{
+	display:inline-block;*display:inline;*zoom:1;
+	background:#fff;
+	width:100%;
+	padding:3px 4px;
+}
+.round .list .showImg a{
+	overflow:hidden;
+}
+.list .showImg a img{
+	width:100%;
+	border:solid #b9b9b9 1px; 
+}
+.round .list .showImg a img{
+	border-radius: 50%;
+	padding: 2px;
+}
+.list .others{
+	width:76%;
+	float:left;
+	padding:0 0 0 14px;
+}
+.round .list .others{width:76%;}
+.infoHead .icon,
+.list .icon{
+	display:inline-block;*display:inline;*zoom:1;
+	width:9px;
+	height:16px;
+	background:url(../imgs/transRight.png) 0 0 no-repeat;
+	background-size:100% 100%;
+	position:absolute;
+	right:0;top:38px;
+}
+
+.others .instrMesg{
+	margin-bottom: 5px;
+}
+.instrMesg span,
+.instrMesg .leval b{
+	display:inline-block;*display:inline;*zoom:1;
+	color:#919395;
+}
+.instrMesg .sexIcon{
+	width:19px;
+	height:18px;
+	background:url(../imgs/sex.png) 0 0 no-repeat;
+	background-size:100% 200%;
+	margin-bottom: -2px;
+}
+.instrMesg .man{
+	background:url(../imgs/sex.png) 0 100% no-repeat;
+	background-size:100% 200%;
+}
+.instrMesg .name{
+	font-size:16px;
+	margin:0 10px;
+	color:#5a5a5a;
+}
+.instrMesg .leval{
+	height:21px;
+	line-height:21px;
+	font-size:14px;
+	color:#949495;
+}
+.instrMesg .leval b{
+	width:18px;
+	height:18px;
+	margin:0 5px 0 0 ;
+	position: relative;
+	vertical-align: middle;
+}
+.instrMesg .leval1{
+	background:url(../imgs/leval.png) 0 0 no-repeat;
+	background-size:100% 500%;
+}
+.instrMesg .leval2{
+	background:url(../imgs/leval.png) 0 25% no-repeat;
+	background-size:100% 500%;
+}
+.instrMesg .leval3{
+	background:url(../imgs/leval.png) 0 49% no-repeat;
+	background-size:100% 500%;
+}
+.instrMesg .leval4{
+	background:url(../imgs/leval.png) 0 74% no-repeat;
+	background-size:100% 500%;
+}
+.instrMesg .leval5{
+	background:url(../imgs/leval.png) 0 98% no-repeat;
+	background-size:100% 500%;
+}
+.instrMesg span.venesname{
+	margin:2px 0 5px 15px;
+}
+.instrMesg span.place{
+	margin:2px 15px 5px 0;
+}
+
+.others .goodattags{
+	
+}
+.goodattags span{
+	display:inline-block;*display:inline;*zoom:1;
+	height:20px; line-height:20px; text-align:center;
+	padding:0 7px;
+	color:#231F20;
+	border-radius:3px;
+	background:#ffad42;
+	margin:0 5px 5px 0;
+}
+.others p.venesname{
+	color:#58595B;
+	font-size:16px;
+}
+.others p.title{
+	color:#5a5a5a;
+	font-size:16px;
+}
+.others .from{
+	font-size:13px;
+	color:#949494;
+}
+.others .levalmesg{
+	margin:5px 0 7px;
+}
+.levalmesg *{
+	display:inline-block;*display:inline;*zoom:1;
+	width:9px; height:8px;
+	background:url(../imgs/fivestar.png) 0 100% no-repeat;
+	background-size:100% 200%;
+	margin:0 3px 0 0 ;
+}
+.leval5 *{
+	background:url(../imgs/fivestar.png) 0 0 no-repeat;
+	background-size:100% 200%;
+}
+.leval1 b,
+.leval2 b,
+.leval2 i,
+.leval3 b,
+.leval3 i,
+.leval3 a,
+.leval4 b,
+.leval4 i,
+.leval4 a,
+.leval4 span{
+	background:url(../imgs/fivestar.png) 0 0 no-repeat;
+	background-size:100% 200%;
+}
+.others .veneslMesg{
+}
+
+
+.stars b {
+	background:url(../imgs/fivestar.png) center bottom no-repeat;
+	background-size:100% 200%;
+}
+.stars1 .s1 ,
+.stars2 .s1, .stars2 .s2 ,
+.stars3 .s1, .stars3 .s2, .stars3 .s3 ,
+.stars4 .s1, .stars4 .s2, .stars4 .s3, .stars4 .s4 ,
+.stars5 .s1, .stars5 .s2, .stars5 .s3, .stars5 .s4, .stars5 .s5 { background-position: center top; }
+
+
+.veneslMesg span{
+	color:#666;
+	font-size:13px;
+	margin:0 10px 0 0;
+}
+
+.loadMore{
+	padding:11px 0 5px;
+	line-height:20px;
+	text-align:center;
+	color:#949495;
+	font-size:13px;
+	vertical-align:top;
+	background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+}
+.loadMar{margin:0 15px;}
+.loadMore .icon{
+	width:24px;
+	height:20px;
+	background:url(../imgs/trans.png) 0 0 no-repeat;
+	background-size:100% 100%;
+	margin:0 10px 0 0;
+	vertical-align:top;
+}
+
+
+
+
+
+
+
+

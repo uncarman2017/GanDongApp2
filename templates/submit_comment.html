@@ -1,0 +1,20 @@
+  
+<div id="content">
+    <h6 ng-bind="title_txt">上海浦东新区源生体育中心</h6>
+    <div class="areaItem input"><textarea class="comment" ng-model="CommentModel.Comment" placeholder="请在这里输入不少于10字的评论内容，如果被采纳，会有想不到的奖励哦~~~"></textarea></div>
+    <div class="areaItem evaluate">
+        <p class="list">
+            <span class="name">总体评价：</span><span id="Stars1"><b class="ok" ng-click="getStars(1,1);"></b><b ng-click="getStars(1,2);"></b><b ng-click="getStars(1,3);"></b><b ng-click="getStars(1,4);"></b><b ng-click="getStars(1,5)"></b></span>
+        </p>
+
+        <p class="list"><span class="name">场馆环境：</span><span id="Stars2"><b class="ok" ng-click="getStars(2,1)"></b><b ng-click="getStars(2,2)"></b><b ng-click="getStars(2,3)"></b><b ng-click="getStars(2,4)"></b><b ng-click="getStars(2,5)"></b></span></p>
+
+        <p class="list"><span class="name">服务态度：</span><span id="Stars3"><b class="ok" ng-click="getStars(3,1)"></b><b ng-click="getStars(3,2)"></b><b ng-click="getStars(3,3)"></b><b ng-click="getStars(3,4)"></b><b ng-click="getStars(3,5)"></b></span></p>
+        <p class="list"><span class="name">设备新旧：</span><span id="Stars4"><b class="ok" ng-click="getStars(4,1)"></b><b ng-click="getStars(4,2)"></b><b ng-click="getStars(4,3)"></b><b ng-click="getStars(4,4)"></b><b ng-click="getStars(4,5)"></b></span></p>
+    </div>
+    <!-- <div class="areaItem addimg">
+        <input type="file" id="upload_file" ng-model="upload_file" style="display:none;">
+        <a class="adds" ng-click="chooiseFile()"></a>
+    </div> -->
+</div><!-- content END-->
+<div class="opera"><a class="inlineBlock btn" ng-click="submitComment();">发表评论</a></div>

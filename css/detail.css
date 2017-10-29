@@ -1,0 +1,280 @@
+﻿/*
+ * 教练详情页 
+ */
+.head{
+	 width:100%;
+	 position:relative;
+}
+.head .bgimg{
+	width:100%;
+}
+.head .showImg{
+	width: 24%;
+	overflow: hidden;
+	margin: 5px 0 10px 0;
+	position:absolute;
+	left:6%;
+	bottom:-20%;
+}
+.head .showImg a{
+	overflow: hidden;
+	width: 100%;
+}
+.head .showImg img{
+	width:100%;
+	padding: 2px;
+	background: #fff;
+	border: solid #b9b9b9 1px;
+	border-radius: 50%;
+}
+.head .talks{
+	padding: 5px 10px;
+	background:#fff;
+	border-radius:3px;
+	font-size:12px;
+	color:#5a5a5a;
+	vertical-align:top;
+	position:absolute;
+	right:10px;bottom:10px;
+}
+.head .talks .icon{
+	width:17px;
+	height:15px;
+	background:url(../imgs/mesg.png) 0 0 no-repeat;
+	background-size:100% 200%;
+	margin: 0 5px -3px 0;
+}
+.instrCenter{padding:10px 15px 0;}
+.instrCenter p{
+	text-align:center;
+	margin:6px 0;
+	vertical-align:top;
+}
+.instrCenter .goodattags{ margin:13px 0;}
+.instrCenter .desitin{
+	padding:0 20px;
+	line-height:25px;
+	text-align:center;
+	background:#2184c6;
+	color:#fff;
+	margin:0 0 0 10px;
+	border-radius:3px;
+}
+.imgList{
+	padding:15px 0;
+	background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+	position:relative;
+	overflow:hidden;
+}
+.talkimg{ background:none1;margin-top:-15px;}
+.imgList .show{
+	width:30px;
+	height:60px;
+	background:url(../imgs/transRight.png) 10px 21px #fff no-repeat;
+	background-size:9px 18px;
+	position:absolute;top:15px;
+}
+.imgList .left{
+	left:0;
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+	display:none;
+}
+ .imgList .right{
+	right:0;
+}
+.imgList .items{
+	width:1000%;
+}
+.imgList .items img{
+	width:60px;
+	height:60px;
+	margin:0 5px 0 0;
+}
+
+.instrMesgList,
+.topLine{
+	background: url(../imgs/bgLing.jpg) 0 -0.5px #fff repeat-x;
+}
+.instructorgym .dataList .list{	
+	margin:0 15px;
+	background:none;
+}
+.introduce{
+	padding:10px 15px;
+}
+.introduce .item{
+	padding:0 0  0 75px;
+	color:#5a5a5a;
+	line-height:20px;
+	position:relative;
+	min-height:20px;
+}
+.introduce .item span{
+	font-size:12px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+.viptalk{
+	padding:0 15px 30px 15px;
+}
+.viptalk .title{
+	padding:10px 0;
+	vertical-align: top;
+}
+.viptalk .title b{
+	width:17px;
+	height:17px;
+	background:url(../imgs/mesg.png) 0 -19px no-repeat;
+	background-size:100% 200%;
+	margin:0 5px 0 0;
+	vertical-align: middle;
+}
+.viptalk .title strong{
+	font-size:15px;
+	color:#5a5a5a;
+	vertical-align: top;
+	/*line-height: 15px;*/
+}
+.gymShow .showObj,
+.talkList .item{
+	padding:10px 0;
+	background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+}
+.talkList  .item .mesg { text-align:left; position:relative;}
+.item .mesg .username{
+	color:#666;
+	font-size:13px;
+	margin:0 10px 0 0;
+}
+.item .mesg .time{
+	color:#666;
+	position:absolute;
+	right:0;
+	font-size:12px;
+}
+
+.gymIcon,.clubIcon,.coachIcon { width: 20px; height: 20px; background:url(../imgs/indexIcon.png) 0 0 no-repeat; background-size:100% 400%; }
+.clubIcon { background-position: 0 33%; }
+.coachIcon { background-position: 0 66%; }
+
+.talkList .texts{
+	color:#58595b;
+	line-height:20px;
+	margin:5px 0 10px;
+}
+.bookCourse{
+	width:100%;
+	padding: 10px 0;
+	vertical-align: top;
+	text-align:center;
+	background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+}
+.bookCourse .btn{
+	height:32px;
+	width:60%;
+	color:#fff;
+	background:#2184c6;
+	border-radius:3px;
+	font-size:16px;
+	text-align:center;
+	line-height:32px;
+	vertical-align: top;
+}
+.bookCourse .status{
+	height:25px;
+	margin:3px 25px;
+	background:url(../imgs/heart.png) 0 0 no-repeat;
+	background-size:25px 25px;
+	vertical-align: top;
+	line-height:25px;
+	padding:0 0 0 30px;
+	font-size:13px;
+}
+.bookCourse .statusGray{
+	background:url(../imgs/heart.png) 0 0 no-repeat;
+	background-size:25px 25px;
+	-webkit-filter: grayscale(100%); 
+	-moz-filter: grayscale(100%); 
+	-ms-filter: grayscale(100%); 
+	-o-filter: grayscale(100%); 
+	filter: grayscale(100%); 
+	filter: gray; 
+} 
+ 
+
+.gymMesg{
+	padding:10px 15px;
+	width:100%;
+	
+}
+.gymMesg .gymname{
+	font-size:16px;
+	color:#58595b;
+}
+.gymMesg .tipmesg{}
+.gymMesg .tipmesg .value{color:#F05A28; margin:0 10px;}
+.gymMesg .tipmesg .talks{color:#666;margin:0 10px;}
+.gymMesg .tipmesg .goTalk{color:#1B75BB;}
+.gymMesg .texts{ color:#666; line-height:18px;}
+.gymShow{
+	padding:0 10px;
+	background: url(../imgs/bgLing.jpg) 0 -0.5px #fff repeat-x;
+}
+.gymShow .imgList{ background:none;} 
+.station{
+	height:40px;
+	line-height:40px;
+	position:relative;
+	font-size:16px;
+	vertical-align:top;
+}
+.station .point{
+	width:14px; height:20px;
+	background:url(../imgs/point.png) 0 0 no-repeat;
+	background-size:100% 200%;
+	margin:0 8px -4px 0;
+}
+.station .icon {
+	width: 9px;
+	height: 16px;
+	background: url(../imgs/transRight.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right:25px;
+	top: 8px;
+}
+.gymShow .list .others{width:70%;}
+.gymShow .list .icon{right:10px;}
+.gymShow .introduce{padding:10px 0;}
+.gymDetail .goodattags span{ background:#37B34A;color:#fff;}
+.gymShow .viptalk{padding: 0 0 30px 0;}
+.showObj .serviceIcon{
+	 display:inline-block;*display:inline;*zoom:1;
+	 height:25px;
+	 margin-right: 25px;
+	 line-height:25px;
+}
+.showObj .serviceIcon i { margin-right: 5px; margin-left: 5px; }
+.showObj .icon1{
+	background:url(../imgs/serviceIcon.png) 0 0 no-repeat;
+	background-size:25px 125px;
+}
+.showObj .icon2{
+	background:url(../imgs/serviceIcon.png) 0 -25px no-repeat;
+	background-size:25px 125px;
+}
+.showObj .icon3{
+	background:url(../imgs/serviceIcon.png) 0 -50px no-repeat;
+	background-size:25px 125px;
+}
+.showObj .icon4{
+	background:url(../imgs/serviceIcon.png) 0 -75px no-repeat;
+	background-size:25px 125px;
+}
+.showObj .icon5{
+	background:url(../imgs/serviceIcon.png) 0 -100px no-repeat;
+	background-size:25px 125px;
+}

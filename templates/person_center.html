@@ -1,0 +1,24 @@
+﻿<link href="css/person.css" rel="stylesheet" type="text/css" media="all" />
+<div class="head userInder">
+    <div class="bgimg"></div>
+    <p class="inlineBlock showImg"><a href="javascript:;" class="inlineBlock"><img src="{{User.HeadPortraitUri}}" ng-click="myInfo()"/></a></p>
+    <p class="inlineBlock name"><b class="inlineBlock sexIcon" ng-class="User.Sex==1 ? 'man': ''"></b><span ng-bind="User.NickName">张三</span></p>
+    <p class="mysign" ng-bind="User.PersonalSign">这是我的个性签名，你的呢</p>
+</div>
+
+<div class="imgList userImglist" ng-show="User.Photos_Json" ng-click="showMyPics(User)">
+    <a href="javascript:;" class="inlineBlock show left"></a>
+    <a href="javascript:;" class="inlineBlock show right"></a>
+    <div class="items">
+        <img ng-repeat="img in User.Photos_Json" ng-src="{{img}}" alt="">
+    </div>
+</div>
+<div class="userIndexmenu impor"><span class="inlineBlock item reser" ng-click="myReservation()"><b></b>我的预约</span><span class="inlineBlock item collect" ng-click="myCollect()"><b></b>我的收藏</span></div>
+<div class="userIndexmenu bigmenu">
+    <ul>
+        <li class="item first coment" ng-click="getMyComments()"><b></b>我的评论</li>
+        <li class="item help" ng-click="getMyFeedbacks()"><b></b>我的反馈</li>
+        <li class="item seter" ng-click="logout();"><b></b>退出登录</li>
+    </ul>
+</div>
+<div class="userIndexmenu"></div>

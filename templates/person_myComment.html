@@ -1,0 +1,21 @@
+
+<link href="css/person.css" rel="stylesheet" type="text/css" media="all" />
+<div ng-repeat="item in items" ng-class="$index==0?'first':''">
+    <div class="myModel" ng-click="gotoGymDetail(item.CommentType,item.ObjectID)"><b class=" inlineBlock" ng-class="{1:'gymIcon',2:'clubIcon',3:'coachIcon'}[item.CommentType]"></b>上海源生路源深体育中心羽毛球馆<span class="icon"></span></div>
+    <div id="content">
+        <div class="talkList">
+            <div class="item">
+                <div class="mesg"><a href="javascript:;" class="username" ng-bind="item.NickName">逗比程序猿</a><p class="inlineBlock levalmesg leval{{item.Star}}"><b></b><i></i><a></a><span></span><strong></strong></p><span class="time" ng-bind="item.CommentTime">2015-02-23 14:26:58</span></div>
+                <p class="texts" ng-bind="item.Comment">很不错哦，里面环境非常好，教练也不错。使用场馆需要自带哪些东西，另外，场馆提供哪些东西呢？</p>
+            </div>
+            <div class="imgList talkimg" ng-show="item.Photos">
+                <a href="javascript:;" class="inlineBlock show left"></a><a href="javascript:;" class="inlineBlock show right"></a>
+                <div class="items"><img ng-repeat="subitem in item.Photos" src="{{subitem}}" alt=""></div>
+            </div>
+        </div>
+    </div>
+</div>
+<p class="loadMore" 
+        ng-show="total>items.length"
+        ng-click="get_more();"><span class="inlineBlock icon"></span>获取更多</p>
+</div>

@@ -1,0 +1,20 @@
+
+<!-- <div class="tipMesg lineBot"><p>验证码已发送到<span ng-bind="set.mobile"></span>，<span ng-bind="set.validity"></span>秒内有效</p></div> -->
+<div id="content">
+    <div class="inputArea">
+        <!-- <p class="inputItem lineBot verCode">
+        <input type="tel" id="txtValidateCode" pattern="[0-9]" placeholder="请输入验证码" maxlength="6" ng-model="value.vercode" />
+        <a class="inlineBlock getVercode notGetcode" ng-click="getVercode();">重新发送</a></p> -->
+        <p class="inputItem lineBot username">
+            <input type="text" placeholder="请输入用户名(4-12位数字或字母或中文)" maxlength="12" autocomplete="off"
+                ng-model="value.userName" />
+        </p>
+        <p class="inputItem lineBot loginPwd">
+            <input type="password" placeholder="请输入登录密码(6-12位数字或字母)" maxlength="12" autocomplete="off" 
+                ng-model="value.loginPwd" />
+        </p>
+    </div>
+    <div class="operaArea">
+        <p><a ng-click="submit();" id="subButton" class="subButton">提交</a></p>
+    </div>
+</div>

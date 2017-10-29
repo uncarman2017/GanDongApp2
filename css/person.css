@@ -1,0 +1,463 @@
+﻿
+.queslist{
+	
+}
+.queslist li{
+	padding:10px 0 ;
+	line-height:20px;
+	background: url(../imgs/bgLing_ccc.png) 0 39.5px #fff repeat-x;
+	position:relative;
+}
+.queslist li a{
+	color:#667764;
+	font-size:13px;	
+}
+.queslist li .icon,
+.myModel .icon{
+	display: inline-block;*display:inline;*zoom:1;
+    width: 9px;
+    height: 16px;
+    background: url(../imgs/transRight.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 5px;
+    top: 11px;
+}
+
+.helplist li { height: auto; background-position: center bottom; background-repeat: repeat-x; }
+.helplist li p { margin: 10px; color: #666; }
+
+.first .myModel { background: none; }
+.myModel{
+	line-height: 30px;
+    width: 100%;
+    padding: 5px 15px;
+    background: url(../imgs/bgLing.jpg) 0 -0.5px #fff repeat-x;
+    font-size: 16px;
+    vertical-align: top;
+	position:relative;
+}
+.myModel b{
+	margin: 6px 10px 0 0;
+    width: 20px;
+    height: 20px;
+	vertical-align:top;
+}
+.myModel b.venes{background:url(../imgs/indexIcon.png) 0 0 no-repeat; background-size:100% 400%;}
+.myModel b.group{background:url(../imgs/indexIcon.png) 0 33% no-repeat; background-size:100% 400%;}
+.myModel b.instructor{background:url(../imgs/indexIcon.png) 0 66% no-repeat; background-size:100% 400%;}
+.myModel .icon{ right:15px; top:13px;}
+
+.myModel .courseHead{ padding:0;}
+.myModel .instrMesg .leval b{top:0;}
+
+.personHead{
+	padding:5px 15px;
+	line-height:30px;
+	height:40px;
+	font-size:16px;
+	    background: url(../imgs/bgLing_ccc.png) 0 39.5px #fff repeat-x;
+}
+.personHead .item{
+	display:inline-block;
+	*display:inline;*zoom:1;
+	width:30%;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+}
+.personHead .long{
+	width:50%;
+}
+.personHead .item b{
+	display:inline-block;
+	*display:inline;*zoom:1;
+	width: 14px;
+    height: 13px;
+    background: url(../imgs/items.png) 0 0 no-repeat;
+    background-size: 100% 200%;
+    position: relative;
+    top: 1px;
+	margin:0 5px 0 0;
+}
+.personHead .item i{
+	font-style: normal;
+    font-size: 16px;
+    color: #59595c;
+}
+.reservatioList .item .icon {
+    width: 9px;
+    height: 16px;
+    background: url(../imgs/transRight.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    right: 0;top:35px;
+}
+.mesgList .list{
+	padding:10px 15px;
+	background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+	font-size:13px;
+}
+.mesgList .first{ background:none;}
+.mesgList .list .text{
+	color:#666;
+}
+.mesgList .list .tip{
+	color:#666;
+	margin:5px 0 0;
+	position:relative;
+}
+.mesgList .list .tip .time{
+	position:absolute;
+	right:0;
+}
+.personHead .itemCur b{
+	background: url(../imgs/items.png) 0 100% no-repeat;
+    background-size: 100% 200%;
+}
+.personHead .itemCur i{
+	color:#28c;
+}
+
+.others .option{
+	float: right;
+    margin-top: -19px;
+    margin-right: -15px;
+}
+
+
+.progress{
+	padding:10px 5%;
+	text-align:center;
+	background: url(../imgs/bgLing_ccc.png) 0 39.5px #fff repeat-x;
+}
+.progress * {
+	display:inline-block;
+	*display:inline;*zoom:1;
+	width:18%;
+	text-align:center;
+	line-height:20px;
+	font-size:16px;
+	color:#bbb;
+}
+.step1 span,.step2 span,.step2 b,.step3 span,.step3 b{color:#28c;}
+.step3 a,.step3 i,.step2 a{color:#ff9916;}.step3 strong{color:#666;}
+.personCourse{
+	padding:12px 15px;
+	/*background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;*/
+}
+
+.personInfo{
+	width:100%;
+	padding:0 15px;
+	background: url(../imgs/bgLing.jpg) 0 -0.5px #fff repeat-x;
+}
+.personInfo .item{
+	background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+	padding:10px 0 10px 80px;
+	line-height:20px;
+	position:relative;
+}
+.personInfo .first{ background:none;}
+.personInfo .item .obj{
+	display:inline-block;
+	*display:inline;*zoom:1;
+	position:absolute;
+	left:15px;top:10px;
+	color:#555;
+}
+.personInfo .item .text input,
+.personInfo .item .text textarea{
+	color:#666;
+	width:100%;
+	outline:none;
+	resize:none;
+}
+.personInfo .notice,
+.personInfo .notice .obj{
+	color:#ff9916;
+}
+.personInfo .opera{
+	display: inline-block;
+    width: 48%;
+    text-align: center;
+    /*height: 35px;
+    line-height: 35px;*/
+    font-size: 15px;
+	background: #fff;
+    color: #2886c3;
+    border: solid #2886c3 1px;
+    border-radius: 3px;
+	margin:0 0 15px 0;
+}
+.personInfo .update{margin-right:2%;}
+.personInfo .cancel{margin-left:2%;}
+.personInfo .backlist{ width:80%; margin:20px 10% 0 10%; background:#2886c3; color:#fff;}
+.personInfo .item .option input{ width:15px;bottom:-2px;}
+.infoHead{ height:60px;padding:20px 15px 20px 30px;}
+
+.infoHead .userImage{ width:50px; float: right; right:35px;}
+.infoHead .icon{top:22px; right:15px;}
+
+
+.keywordSearch{
+	padding: 8px 15px;
+    line-height: 25px;
+    font-size: 16px;
+    background: url(../imgs/bgLing_ccc.png) 0 40.5px #fff repeat-x;
+    vertical-align:top;
+    text-align:center;
+}
+.keywordSearch span{
+	display:inline-block;
+	*display:inline;*zoom:1;
+    vertical-align:top;
+}
+.keywordSearch .alt{
+    width:29%;
+    text-align:left;
+    color:#899;
+}
+.keywordSearch .input{
+    width:45%;
+    text-align:center;
+}
+.keywordSearch .input input {
+    width:100%;
+    border:solid #899 1px;
+    border-radius:3px;
+    padding:0 2px;
+}
+.keywordSearch .oper{
+    width:21%;
+    text-align:right;
+}
+.keywordSearch .oper a {
+    height:25px;
+    line-height:25px;
+    text-align:center;
+    color:#FFF;
+    width:80%;
+    background:#28c;
+    border-radius:3px;
+}
+.reservatioList {
+    padding:0 15px;
+}
+.reservatioList .item {
+    padding:12px 35px 12px 60px;
+    background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+    position:relative;
+}
+.reservatioList .item:first-child {
+    background:none;
+}
+.reservatioList .item .intal {
+    width:60px;
+    position:absolute;
+    left:0; top:15px;
+}
+.item .intal span {
+    display:inline-block;
+    *display:inline;*zoom:1;
+    width:100%;
+}
+.item .intal .status {
+    font-size:16px;
+}
+.item .intal .step1 {color:#28c;}
+.item .intal .step2 {color:#ff9916;}
+.item .intal .step3 {color:#bbb;}
+
+.item .intal .obj {
+    color:#ffaa45;
+    font-size:13px;
+    border:#ffaa45 solid 1px;
+    border-radius:3px;
+    text-align:center;
+    width:80%;
+}
+.reservatioList .item p {color:#666;}
+.reservatioList .item p span{ margin:0 15px 0 0;}
+
+.userInder .showImg {
+    left:7%;
+    top:12%;
+    bottom:0;
+    border:none;
+}
+.name .sexIcon{
+	width:19px;
+	height:18px;
+	background:url(../imgs/sex.png) 0 0 no-repeat;
+	background-size:100% 200%;
+	margin:0 5px -2px 0;
+    
+}
+.name .man{
+	background:url(../imgs/sex.png) 0 100% no-repeat;
+	background-size:100% 200%;
+}
+.userInder .name {
+    padding: 3px 10px;
+    background: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #5a5a5a;
+    vertical-align: top;
+    position: absolute;
+    left: 33%;
+    top:25%;
+}
+.userInder .mysign {
+    max-width:60%;
+    padding: 3px 10px;
+    background: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #5a5a5a;
+    vertical-align: top;
+    position: absolute;
+    left: 33%;
+    top:54%;
+}
+
+.userImglist,
+.userIndexmenu {
+    background: url(../imgs/bgLing.jpg) 0 -0.5px #fff repeat-x;
+    padding:15px;
+}
+.impor{
+	padding:10px 0;
+}
+.bigmenu {
+    padding-top:0;
+    padding-bottom:0;
+}
+.userIndexmenu .item {
+	width:100%;
+}
+
+.impor .item{width:50%; font-size:15px; padding:0 0 0 25px;}
+.userIndexmenu .item b{
+	display:inline-block;
+	*display:inline;*zoom:1;
+	width:20px; height:20px;
+	margin:0 10px 0px 0;
+}
+.userIndexmenu .reser{ border-right:solid #666 1px;}
+.impor .reser b{
+	background:url(../imgs/userinfo.png) 0 0 no-repeat;
+	background-size:100% 200%;
+    vertical-align: middle;
+}
+.impor .collect b{
+	background:url(../imgs/userinfo.png) 0 100% no-repeat;
+	background-size:100% 200%;
+    vertical-align: middle;
+}
+.bigmenu .item{
+	background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+    vertical-align: middle;
+    padding:12px 0;
+    
+}
+.bigmenu .first{
+	background:none;
+}
+.bigmenu .item b{width:15px; height:15px;}
+.userIndexmenu .coment b{
+	background:url(../imgs/iconlist.png) 0 0 no-repeat;
+	background-size:15px 45px;
+    vertical-align: middle;
+}
+.userIndexmenu .help b{
+	background:url(../imgs/iconlist.png) 0 -15px no-repeat;
+	background-size:15px 45px;
+    vertical-align: middle;
+    vertical-align: middle;
+}
+.userIndexmenu .seter b{
+	background:url(../imgs/iconlist.png) 0 -30px no-repeat;
+	background-size:15px 45px;
+    vertical-align: middle;
+}
+
+.myPicsShow{
+	width:100%;
+	padding:10px;
+	padding-bottom:60px;
+}
+.myPicsShow .title{
+	height:25px;
+	line-height:25px;
+	background:rgba(239, 239, 239, 0.51);
+	font-size:14px;
+	color:#666;
+	margin:0 0 5px 0
+}
+.myPicsShow .title b{
+	font-size:17px;
+	margin:0 3px;
+}
+.myPicsShow .imglist .item{
+	position:relative;
+}
+.myPicsShow .imglist .item i{
+	display:inline-block;
+	*display:inline;*zoom:1;
+	width:25px;height:25px;
+	border:solid #999 1px;
+	background:#fff;
+	position:absolute;
+	right:15px; bottom:20px;
+	border-radius:3px;
+}
+.myPicsShow .imglist .select i{
+	border:none;
+	background:url(../imgs/opera.png) 0 0 no-repeat;
+	background-size:25px 50px;
+}
+.myPicsShow .imglist .item img{
+	width:100%;
+	margin:0 0 5px 0 ;
+}
+.myPicsShow .imglist .select img{
+	-webkit-filter: grayscale(1);
+	filter:gray;
+	filter: grayscale(1);
+}
+.myPicsOpera {
+	padding:10px;
+	width:100%;
+	position:fixed;
+	bottom:0;
+	border-top:solid #999 1px;
+	background:#fff;
+}
+.myPicsOpera a{
+	display:inline-block;
+	*display:inline;*zoom:1;
+	background:#2184c6;
+	height:32px;
+	line-height:32px;
+	border-radius:3px;
+	text-align:center;
+	color:#fff;
+}
+.myPicsOpera .upload,
+.myPicsOpera .delete{
+	width:75%;
+	margin:0 2%  0 0;
+}
+.myPicsOpera .edit,
+.myPicsOpera .quick{
+	width:23%;
+}
+.myPicsOpera .hidden{display:none;}
+
+
+
+.personInfo .item label { margin-right: 15px; }
+
+.bgimg { width: 100%; height: 150px; background: url(../imgs/bg.jpg) top center no-repeat; background-size: 100% auto;}

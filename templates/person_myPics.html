@@ -1,0 +1,27 @@
+﻿
+<link href="css/course.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/person.css" rel="stylesheet" type="text/css" media="all" />
+<!--<p>开发说明：默认这些复选框是不显示的，开发到这里请删除本行代码</p>-->
+<div class="myPicsShow">
+    <div class="imglist">
+        <span class="item" ng-repeat="item in Photos"><img src="{{item}}" /><i></i></span>
+        <span class="item"><img src="imgs/user/05.png" /><i></i></span>
+    </div>
+    <!--<p class="title"><b>2015</b>年<b>11</b>月<b>21</b>日，<b>2</b>张</p>
+    <div class="imglist">
+        <span class="item"><img src="imgs/user/banner01.png" /><i></i></span>
+        <span class="item"><img src="imgs/user/05.png" /><i></i></span>
+    </div>
+    <p class="title"><b>2015</b>年<b>11</b>月<b>21</b>日，<b>3</b>张</p>
+    <div class="imglist">
+        <span class="item"><img src="imgs/user/01.png" /><i></i></span>
+        <span class="item select"><img src="imgs/user/02.png" /><i></i></span>
+        <span class="item"><img src="imgs/user/03.png" /><i></i></span>
+    </div>-->
+</div>
+<!-- 这里四个按钮，默认显示 上传 和 管理，当点击 管理，图片上的图标全部出现，隐藏上传和管理，显示 删除和退出，用户选中的有对勾，点击删除，删除用户选中的图片，点击退出管理，隐藏 删除和 退出，显示 上传和管理 -->
+<div class="myPicsOpera">
+    <a href="javascript:;" class="upload">上传照片</a>
+    <a href="javascript:;" class="edit">管理照片</a><a href="javascript:;" class="delete hidden">删除选中照片</a>
+    <a href="javascript:;" class="quick hidden">退出管理</a>
+</div>

@@ -1,0 +1,13 @@
+<link href="css/course.css" rel="stylesheet" type="text/css" media="all" />
+<div class="courseHead">
+    <div class="userImage"><a href="javascript:;"><img src="{{CourseDetail.CoachHeadPortraitUri}}"></a></div>
+    <p class="instrMesg">
+        <span class="sexIcon"></span><span class="name" ng-bind="CourseDetail.CoachName">陈思明</span>
+        <span class="leval"><b class="leval{{CourseDetail.CoachLevel}}"></b><span ng-switch="CourseDetail.CoachLevel"><span ng-switch-when="1">一</span><span ng-switch-when="2">二</span><span ng-switch-when="3">三</span><span ng-switch-when="4">四</span><span ng-switch-when="5">五</span></span>星教练</span>
+    </p>
+</div>
+<div class="courseMesg">
+    <div class="result"><p>课程预约已经取消</p></div>
+    <div style="text-align:center; font-size:12px; color:#929696;">和对方达成协议，以后有时间再约</div>
+</div>
+<div class="opera"><a href="javascript:;" class="btn submit" ng-click="goback()">返回</a></div>

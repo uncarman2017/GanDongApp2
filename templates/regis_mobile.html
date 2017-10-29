@@ -1,0 +1,18 @@
+
+<!-- <div class="tipMesg lineBot"><p>为验证您的信息，会发送验证码到您手机。</p></div> -->
+<div id="content">
+    <div class="inputArea">
+        <p class="inputItem lineBot mobile"><input type="tel" pattern="[0-9]" placeholder="请输入您的11位手机号" ng-model="regis.mobile" maxlength="11" /></p>
+        <p class="readPact" 
+        	ng-class="regis.has_checked ? 'select' : ''">
+        	<span ng-click="regis.has_checked=!regis.has_checked">
+        		<span class="inlineBlock checkbox"></span> 同意
+        	</span>
+        	<a ng-click="signPact();" class="inlineBlock servicePact">《敢动体育服务条款》</a>
+        </p>
+    </div>
+    <div class="operaArea">
+        <p><a id="subButton" class="subButton" ng-click="Next();">下一步</a></p>
+        <p class="breadOpera"><a ng-click="goto('login');" class="right backLogin">返回登录</a></p>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+
+<link href="css/person.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/course.css" rel="stylesheet" type="text/css" media="all" />
+<div class="personHead"><span class="item" ng-class="{itemCur:CollectType==1}" ng-click="gymShow()"><b></b><i>场馆</i></span><span class="item" ng-click="clubShow()" ng-class="{itemCur:CollectType==2}"><b></b><i>俱乐部</i></span><span class="item" ng-click="coachShow()" ng-class="{itemCur:CollectType==3}"><b></b><i>教练</i></span><!-- <span class="item" ng-click="articleShow()" ng-class="{itemCur:CollectType==4}"><b></b><i>文章</i></span> --></div>
+<div id="content">
+    <div class="dataList" ng-switch="CollectType">
+
+
+        <!--场馆列表-->
+        <div ng-switch-when="1" >
+            <div class="list clear listFirst" ng-repeat="item in Collect.gymCollects" ng-click="gotoGymDetail(item.ObjectID)">
+                <span class="icon"></span>
+                <div class="showImg"><a href="javascript:;"><img src="{{item.Photo}}"></a></div>
+                <div class="others">
+                    <p class="gymname" ng-bind="item.GymName">三林体育中心</p>
+                    <p class="inlineBlock levalmesg stars stars{{item.StarLevel}}"><b class="s1"></b><b class="s2"></b><b class="s3"></b><b class="s4"></b><b class="s5"></b></p>
+                    <p class="gymlMesg"><span class="place" ng-bind="item.Place">浦东新区</span><span>&nbsp;</span><span class="useway" ng-bind="item.CourseTypeNames">运动健身</span></p>
+                </div>
+            </div>
+        </div>
+       
+        <!--<div class="list clear"><span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/04.png"></a></div>
+            <div class="others">
+                <p class="gymname">三林体育中心</p>
+                <p class="levalmesg leval5"><b></b><i></i><a></a><span></span><strong></strong></p>
+                <p class="gymlMesg"><span class="place">浦东新区</span><span class="useway">运动健身</span></p>
+            </div>
+        </div>-->
+        <!--俱乐部列表-->
+        <div ng-switch-when="2">
+            <div class="list clear listFirst" ng-repeat="item in Collect.clubCollects" ng-click="gotoClubDetail(item.ObjectID)">
+                <span class="icon"></span>
+                <div class="showImg"><a href="javascript:;"><img src="{{item.Photo}}"></a></div>
+                <div class="others">
+                    <p class="title" ng-bind="item.ClubName">俱乐部2的名字</p>
+                    <p class="from" ng-bind="item.Desc">这是一段描述体育馆的文字</p>
+                </div>
+            </div>
+        </div>
+        
+        <!--<div class="list clear"><span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/01.png"></a></div>
+            <div class="others">
+                <p class="title">俱乐部2的名字</p>
+                <p class="from">这是一段描述体育馆的文字</p>
+            </div>
+        </div>-->
+        <!--教练列表 需要给上面的dataList 添加 round-->
+        <div ng-switch-when="3">
+            <div class="list clear listFirst" ng-repeat="item in Collect.coachCollects" ng-click="gotoCoachDetail(item.ObjectID)">
+                <span class="icon"></span>
+                <div class="showImg"><a href="javascript:;"><img src="{{item.Photo}}"></a></div>
+                <div class="others">
+                    <p class="instrMesg"><span class="sexIcon" ng-class="{man: item.Sex==1}"></span><span class="name" ng-bind="item.Name">陈思明</span><span class="leval" ng-switch="item.Level"><b class="leval{{item.Level}}"></b><span ng-switch-when="1">初级教练</span><span ng-switch-when="2">中级教练</span><span ng-switch-when="3">高级教练</span><span ng-switch-when="4">培训师</span></span></p>
+                    <p class="instrMesg"><span class="age">教龄{{item.Years}}年</span><span>&nbsp;</span><span class="gymname" ng-bind="item.GymName">三林体育中心</span></p>
+                    <p class="goodattags"><span ng-repeat="subitem in item.CourseTypeNames.split(',')" ng-bind="subitem">游泳</span><span>跳水</span><span>冲浪</span></p>
+                </div>
+            </div>
+        </div>
+       
+        <!--<div class="list clear"><span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/02.png"></a></div>
+            <div class="others">
+                <p class="instrMesg"><span class="sexIcon man"></span><span class="name">陈经纶</span><span class="leval"><b class="leval5"></b>五星教练</span></p>
+                <p class="instrMesg"><span class="age">教龄5年</span><span class="gymname">陈经纶体育馆</span></p>
+                <p class="goodattags"><span>游泳</span><span>跳水</span><span>冲浪</span></p>
+            </div>
+         </div>  -->
+        <!--文章列表-->
+        <div ng-switch-when="4">
+            <div class="list clear listFirst" ng-repeat="item in Collect.articleCollects">
+                <span class="icon"></span>
+                <div class="showImg"><a href="javascript:;"><img src="{{item.Photo}}"></a></div>
+                <div class="others">
+                    <p class="title" ng-bind="item.Title">秋冬季锻炼应该注意的事项</p>
+                    <p class="from" ng-bind="item.Reference">这是文章的出处</p>
+                    <!--如果要进行删除操作，解注下面这行代码-->
+                    <!--<span class="option"><label><input type="checkbox" name="delete"></label></span>-->
+                </div>
+            </div>
+            <!--<div class="list clear">
+                <span class="icon"></span>
+                <div class="showImg"><a href="javascript:;"><img src="imgs/user/01.png"></a></div>
+                <div class="others">
+                    <p class="title">饭后慢走的八大好处</p>
+                    <p class="from">这是文章的出处</p>-->
+                    <!--如果要进行删除操作，解注下面这行代码-->
+                    <!--<span class="option"><label><input type="checkbox" name="delete"></label></span>-->
+                <!--</div>
+            </div>-->
+        </div>
+        
+
+
+
+    </div>
+    <p class="loadMore"><span class=" inlineBlock icon"></span>下拉获取更多</p>
+</div>

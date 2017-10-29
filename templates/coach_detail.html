@@ -1,0 +1,109 @@
+
+<div class="head"><img class="bgimg" src="imgs/user/banner01.png" alt="教练陈思明的主题图" />
+    <p class="inlineBlock showImg"><a href="javascript:;" class="inlineBlock" ng-show="coach.HeadPortraitUri"><img ng-src="{{coach.HeadPortraitUri || settings.default_face }}"></a></p>
+    <a class="inlineBlock talks"><b class="inlineBlock icon"></b>评论(<i ng-bind="Comm.Total">213</i>)</a>
+</div>
+
+<div class="instrMesg instrCenter">
+    <p>
+        <span class="sexIcon" ng-class="{'1':'man', '2': ''}[coach.sex]"></span>
+        <span class="name" ng-bind="coach.Name">陈思明</span>
+        <span class="age">教龄<i ng-bind="coach.Years">5</i>年</span>
+        <span class="icons collectIcon" 
+            ng-class="is_collected ? 'collectedIcon' : ''"
+            ng-click="changeCollect(!is_collected)"></span>
+    </p>
+    <p ng-bind="coach.PersonalSign">擅长于心律配合运动的康复性运动教练</p>
+    <p><span class="leval"><b class="leval{{coach.Level}}"></b><span ng-bind="{'1':'一','2':'二','3':'三','4':'四','5':'五'}[coach.Level]"></span>星教练</span></p>
+    <p class="goodattags" ng-show="coach.Courses.lengh>0">
+        <span ng-bind="course.Name" ng-repeat="course in coach.Courses">游泳</span>
+        <!--<span>跳水</span><span>冲浪</span>-->
+    </p>
+    <div class="imgList" ng-click="showPics(coach.Photos);" ng-if="coach.Photos.length>0">
+        <a class="inlineBlock show left"></a><a class="inlineBlock show right"></a>
+        <div class="items">
+            <img ng-repeat="img in coach.Photos" ng-src="{{img}}" alt="">
+            <!--<img src="imgs/user/01.png" alt="" />
+            <img src="imgs/user/03.png" alt="" />
+            <img src="imgs/user/04.png" alt="" />
+            <img src="imgs/user/05.png" alt="" />
+            <img src="imgs/user/01.png" alt="" />
+            <img src="imgs/user/03.png" alt="" />
+            <img src="imgs/user/04.png" alt="" />
+            <img src="imgs/user/05.png" alt="" />-->
+        </div>
+    </div>
+</div>
+
+<div class="bookCourse"><a class="inlineBlock btn" ng-click="bookingCourse();">预定课程</a></div>
+
+<div class="gymShow station ng-scope">
+    <b class="inlineBlock point"></b>
+    <i ng-bind="coach.Gym.GymAddress" class="ng-binding">肇家浜路1111号</i>
+    <span class="inlineBlock icon"></span>
+</div>
+
+<div class="instrMesgList instructorVenes">
+    <div class="dataList" ng-click="goto('gym_detail/'+coach.Gym.GymID)">
+        <div class="list clear"><span class="icon"></span>
+            <div class="showImg" ng-show="coach.Gym.Photos"><a><img ng-src="{{coach.Gym.Photos[0]}}" /></a></div>
+            <div class="others">
+                <p  class="gymname" ng-bind="coach.Gym.GymName">三林体育中心</span></p>
+                <p class="veresIndro" ng-bind="coach.Gym.GymDesc"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="instrMesgList instructorVenes">
+    <div class="dataList">
+        <div class="list clear" ng-click="goto('club_detail/'+coach.Club.ClubID);">
+            <span class="icon"></span>
+            <div class="showImg" ng-if="coach.Club.Photos.length>0">
+                <a><img ng-src="{{coach.Club.Photos[0]}}" /></a>
+            </div>
+            <div class="others">
+                <p  class="gymname" ng-bind="coach.Club.ClubName"></span></p>
+                <p class="veresIndro" ng-bind="coach.Club.ClubDesc"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="instrMesgList introduce">
+    <div class="item"><span>个人简介：</span><p class="indro" ng-bind="coach.BriefIntroduction">陈思明先生是一个出色的健身教练，把健身当作毕生追求的他，已经不仅仅是为了教学，而是更多的追求。</p></div>
+    <div class="item"><span>荣誉证书：</span><p class="winer" ng-bind="coach.Certificates"></p></div>
+    <div class="item"><span>课程安排：</span><p class="plans" ng-bind="coach.CourseDesc"></p></div>
+    <div class="item"><span>其他描述：</span><p class="anyth" ng-bind="coach.HonorDesc"></p></div>
+</div>
+
+<div class="instrMesgList">
+    <div class="viptalk">
+        <div class="title"><b class="inlineBlock"></b><strong>会员评价</strong></div>
+        <div class="talkList" ng-if="Comm.Comments.length>0">
+            <div class="item" ng-repeat="com in Comm.Comments">
+                <div class="mesg">
+                    <a class="username" ng-bind="com.NickName">逗比程序猿</a>
+                    <p class="inlineBlock levalmesg stars stars{{com.Star}}">
+                        <b class="s1"></b>
+                        <b class="s2"></b>
+                        <b class="s3"></b>
+                        <b class="s4"></b>
+                        <b class="s5"></b>
+                    </p>
+                    <span class="time" ng-bind="com.CommentTime | date:'yyyy-MM-dd HH:mm:ss'">2015-02-23 14:26:58</span>
+                    <p class="texts" ng-bind="com.Comment">很不错哦，里面环境非常好，教练也不错。使用场馆需要自带哪些东西，另外，场馆提供哪些东西呢？</p>
+                </div>
+            </div>               
+        </div>
+        <p ng-if="Commentslength<=0">
+            暂无评论
+        </p>
+        <a ng-click="submitComment();" href="javascript:;">发表评论</a>
+        <p class="loadMore" ng-show="!isEnd" ng-click="get_more();">
+            <span class="inlineBlock icon"></span>获取更多
+        </p>
+    </div>
+</div>
+
+

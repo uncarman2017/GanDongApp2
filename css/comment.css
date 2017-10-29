@@ -1,0 +1,92 @@
+﻿/*
+ * 场馆纠错和评论 
+ */
+#content{
+	padding:0 15px;
+}
+h6,.title{
+	padding:10px 5px;
+	color:#58595B;
+	font-size:16px;
+	font-weight:normal;
+	width:100%;
+}
+.areaItem{
+	padding:10px 5px;
+	background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+}
+.input .comment{
+	resize:none;
+	line-height:18px;
+	color:#444;
+	width:100%;
+	min-height:50px;
+}
+.evaluate .list{
+	margin:5px 0;
+}
+.list span{ vertical-align:top;}
+.list .name{color:#58595B;}
+.list b{
+	display:inline-block;*display:inline;*zoom:1;
+	width:18px; height:16px;
+	background:url(../imgs/fivestar.png) 0 -16px no-repeat;
+	background-size:18px 32px;
+	margin: 0 3px 0 0;
+}
+.list b.ok{
+	background:url(../imgs/fivestar.png) 0 0 no-repeat;
+	background-size:18px 32px;
+}
+
+.addimg{ white-space:normal;}
+.addimg a,
+.addimg a b{display:inline-block;*display:inline;*zoom:1;}
+.addimg a{
+	width:62px; height:62px;
+	overflow:hidden;
+	border-radius:5px;
+	margin:0 5px 5px 0;
+	position:relative;
+	vertical-align:top;
+}
+.addimg a.adds{
+	border:dashed #ccc 1px;
+	background:url(../imgs/add.png) center #fff no-repeat;
+	background-size:40%;
+	text-align:center;
+	vertical-align:bottom;
+}
+.addimg a b{
+	width:20px; height:20px;
+	background:url(../imgs/opera.png) 0 100% #fff no-repeat;
+	background-size:20px 40px;
+	background-size:20px;
+	position:absolute;
+	right: 2px;
+    bottom: 2px;
+    border-radius: 6px;
+    opacity: 0.8;
+}
+.addimg a img{
+	width:100%;
+}
+
+.opera{
+	width:100%;
+	padding: 10px 0;
+	vertical-align: top;
+	text-align:center;
+	background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x;
+}
+.opera .btn{
+	height:32px;
+	width:70%;
+	color:#fff;
+	background:#2184c6;
+	border-radius:3px;
+	font-size:16px;
+	text-align:center;
+	line-height:32px;
+	vertical-align: top;
+}

@@ -1,0 +1,13 @@
+<link href="css/course.css" rel="stylesheet" type="text/css" media="all" />
+<div class="courseHead">
+    <div class="userImage"><a href="javascript:;"><img src="{{CourseDetail.CoachHeadPortraitUri}}"></a></div>
+    <p class="instrMesg">
+        <span class="sexIcon"></span><span class="name" ng-bind="CourseDetail.CoachName">陈思明</span>
+        <span class="leval"><b class="leval{{CourseDetail.CoachLevel}}"></b><span ng-switch="CourseDetail.CoachLevel"><span ng-switch-when="1">一</span><span ng-switch-when="2">二</span><span ng-switch-when="3">三</span><span ng-switch-when="4">四</span><span ng-switch-when="5">五</span></span>星教练</span>
+    </p>
+</div>
+<div class="courseMesg">
+    <div class="result"><p>您的公益课预约申请已经提交</p><p>请等待教练的确认</p></div>
+    <div class="notice"><p>注意：如果在申请的24小时后，教练还没有确认，该申请会自动转为取消状态</p></div>
+</div>
+<div class="opera" ng-click="goback()"><a href="javascript:;" class="btn submit">返回</a></div>

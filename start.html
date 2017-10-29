@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html class="um landscape min-width-240px min-width-320px min-width-480px min-width-768px min-width-1024px">
+<head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,target-densitydpi=medium-dpi">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-touch-fullscreen" content="YES">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta http-equiv="Cache-Control" content="private">
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />
+
+    <link href="css/base-full.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/login.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/comment.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/detail.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/list.css" rel="stylesheet" type="text/css" media="all" />
+
+</head>
+<body class="container" ng-app="app">
+
+    <div ng-view class="content"></div>
+
+    <div class="topm">
+        <div class="title"></div>
+        <div class="pull-left">
+            <i class="fa fa-angle-left" id="backBtn"></i>
+        </div>
+        <div class="pull-right">
+            <i class="fa fa-user-md" id="personBtn"></i>
+            <i class="fa fa-home" id="homeBtn"></i>
+        </div>
+    </div>
+
+    <script src="js/comm/appcan.js"></script>
+    <script src="js/comm/appcan.control.js"></script>
+    <script src="js/comm/jquery.js"></script>
+    <script src="js/comm/slider.js"></script>
+    <script src="js/comm/moment.js"></script>
+    <script src="js/comm/jquery.ajaxfileupload.js"></script>
+    <script src="js/comm/comm.js"></script>
+    <script src="js/comm/f.ui.dialog.js"></script>
+    <script src="js/comm/china_city.js"></script>
+
+    <script src="js/comm/angular.js"></script>
+    <script src="js/comm/angular-route.min.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+
+    <script src="js/controllers/index.js"></script>
+    <script src="js/controllers/index_search.js"></script>
+    <script src="js/controllers/index_searchInput.js"></script>
+    <script src="js/controllers/upload_file.js"></script>
+
+    <script src="js/controllers/forgetpwd_mobile.js"></script>
+    <script src="js/controllers/forgetpwd_setpwd.js"></script>
+    <script src="js/controllers/login.js"></script>
+    <script src="js/controllers/person_feedback.js"></script>
+    <script src="js/controllers/regis_mobile.js"></script>
+    <script src="js/controllers/regis_setmesg.js"></script>
+
+    <script src="js/controllers/group_detail.js"></script>
+    <script src="js/controllers/coach_detail.js"></script>
+    <script src="js/controllers/coach_list.js"></script>
+
+    <script src="js/controllers/gym_debug.js"></script>
+    <script src="js/controllers/gym_detail.js"></script>
+    <script src="js/controllers/gym_list.js"></script>
+
+    <script src="js/controllers/course_appointment.js"></script>
+    <script src="js/controllers/course_cancel.js"></script>
+    <script src="js/controllers/course_error.js"></script>
+    <script src="js/controllers/course_coach.js"></script>
+    <script src="js/controllers/course_load.js"></script>
+    <script src="js/controllers/course_success.js"></script>
+
+    <script src="js/controllers/person_feedback.js"></script>
+    <script src="js/controllers/person_center.js"></script>
+    <script src="js/controllers/person_help.js"></script>
+    <script src="js/controllers/person_myCollect.js"></script>
+    <script src="js/controllers/person_myComment.js"></script>
+    <script src="js/controllers/person_myInfo.js"></script>
+    <script src="js/controllers/person_myMesg.js"></script>
+    <script src="js/controllers/person_myPics.js"></script>
+    <script src="js/controllers/person_myReservation.js"></script>
+    <script src="js/controllers/person_reservationDetail.js"></script>
+
+    <script src="js/controllers/submit_comment.js"></script>
+    <script src="js/controllers/club_list.js"></script>
+    <script src="js/controllers/club_detail.js"></script>
+    <script src="js/controllers/pics.js"></script>
+
+    <!---->
+
+    <script>
+        appcan.ready(function () {
+
+        });
+
+        /*
+        var routeApp = angular.module('routeApp',['ngRoute']);
+        routeApp.config(['$routeProvider',function ($routeProvider) {
+              $routeProvider
+              .when('/list', {
+                templateUrl: 'list.html',
+                controller: 'RouteListCtl'
+              })
+              .when('/list/:id', {
+                  templateUrl: 'detail.html',
+                  controller: 'RouteDetailCtl'
+              })
+              .otherwise({
+                redirectTo: '/list'
+              });
+        }]);
+        //controller
+        routeApp.controller('RouteListCtl',function($scope) {
+        });
+        routeApp.controller('RouteDetailCtl',function($scope, $routeParams) {
+            $scope.id = $routeParams.id;
+        });
+        */
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<link href="css/course.css" rel="stylesheet" type="text/css" media="all" />
+<div class="courseHead">
+    <div class="userImage"><a href="javascript:;"><img src="{{CourseDetail.CoachHeadPortraitUri}}"></a></div>
+    <p class="instrMesg">
+        <span class="sexIcon"></span><span class="name" ng-bind="CourseDetail.CoachName">陈思明</span>
+        <span class="leval"><b class="leval{{CourseDetail.CoachLevel}}"></b><span ng-switch="CourseDetail.CoachLevel"><span ng-switch-when="1">一</span><span ng-switch-when="2">二</span><span ng-switch-when="3">三</span><span ng-switch-when="4">四</span><span ng-switch-when="5">五</span></span>星教练</span>
+    </p>
+</div>
+<div class="courseMesg">
+    <div class="result"><p class="ico"><b class=" inlineBlock icon"></b>很遗憾，预定失败</p></div>
+    <div class="notice"><p><span class="gray">原因：</span>这个时间已经有其他预约了</p></div>
+</div>
+<div class="opera noopera"><a href="javascript:;" class="btn submit" ng-click="gobackCourseAppointment()">修改预约</a></div>
+<div class="courseMesg">
+    <div class="result" style="text-align:left; padding:0 12.5%;"><p>您也可以</p></div>
+</div>
+<div class="opera noopera"><a href="javascript:;" class="btn submit" ng-click="goCoachList()">选择其它教练</a></div>
+<div class="courseMesg">
+    <div class="result" style="text-align:left; padding:0 12.5%;"><p>您也可以:<span style="">关闭预约</span></p></div>            
+    <div style="text-align:left; padding:0 12.5%;"><p><textarea class="altText" style="width:100%; min-height:60px; resize:none;" ng-model="cancelReason" placeholder="请在这里输入关闭原因"></textarea></p></div>
+</div>
+<div class="opera noopera" ng-click="cancelBooking()"><a href="javascript:;" class="btn cancel">关闭预约申请</a></div>

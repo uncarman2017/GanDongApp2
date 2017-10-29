@@ -1,0 +1,74 @@
+<link href="css/course.css" rel="stylesheet" type="text/css" media="all" />
+<div class="courseHead">
+    <div class="userImage">
+        <a href="javascript:;"><img ng-src="{{CoachHeadPortraitUri||settings.default_face}}"
+        ></a>
+    </div>
+    <p class="instrMesg">
+        <span class="sexIcon" ng-class="{'1':'man', '2': ''}[BookingInfo.CoachSex]"></span>
+        <span class="name" ng-bind="BookingInfo.CoachName">陈思明</span>
+        <span class="leval">
+            <b class="leval{{BookingInfo.CoachLevel}}"></b>
+            <span ng-bind="{'1':'一','2':'二','3':'三','4':'四','5':'五'}[BookingInfo.CoachLevel]"></span>星教练
+        </span>
+    </p>
+</div>
+<div class="courseItem station">
+    <b class="inlineBlock point"></b>
+    <span ng-bind="BookingInfo.GymAddress"></span>
+    <span class="inlineBlock icon"></span>
+    <div class="clearfixed"></div>
+</div>
+<div class="courseItem option">
+    <label>
+        <input type="radio" ng-model="BookingInfo.Hours" name="hour" value="1" />
+        <b>一节课400肌点</b>
+    </label><label>
+        <input type="radio" ng-model="BookingInfo.Hours" name="hour" value="10" />
+        <b>十节课3600肌点</b>
+    </label>
+</div>
+<div class="courseItem option short">
+    <p ng-show="course_appointment_type=='edit'">
+        <span class="obj">课程：</span>
+        <b ng-bind="BookingInfo.CourseTypeName"></b>
+    </p>
+    <p ng-show="course_appointment_type=='new'">
+        <span class="obj">课程：</span>
+        <label class="course_app_s" ng-repeat="myitem in BookingInfo.Courses">
+            <input type="radio" name="sportname" ng-model="BookingInfo.CourseTypeID" ng-value="myitem.CourseTypeID" /><b ng-bind="myitem.CourseTypeName"></b>
+        </label>
+    </p>
+</div>
+<div class="courseItem" ng-click="show_BookingDay=!show_BookingDay;">
+    预约日期：
+    <b class="tip" ng-bind="BookingInfo.CourseDate.split('T')[0]">2015-11-29</b>
+    <i>(需要提前三天预约)</i>
+    <span class="inlineBlock icon"></span>
+</div>
+<div class="options" ng-show="show_BookingDay">
+    <p class="thisTitle"><b></b>选择预约日期</p>
+    <div class="items">
+        <span class="bor" ng-repeat="d in course_day" ng-click="getCourseDay(d)" ng-bind="d"></span>
+    </div>
+</div>
+
+<div class="courseItem" ng-click="show_BookingTime=!show_BookingTime;">
+    预约时间：
+    <b class="tip">
+        <input ng-model="BookingInfo.CourseBeginTime"> - <input ng-model="BookingInfo.CourseEndTime">
+    </b>
+    <span class="inlineBlock icon"></span>
+</div>
+<div class="options" ng-show="show_BookingTime">
+    <p class="thisTitle"><b></b>选择预约时间段</p>
+    <div class="items">
+        <span class="bor" ng-repeat="ct in course_time" ng-click="getCourseTime(ct)" ng-bind="ct"></span>
+    </div>
+</div>
+<div class="courseItem">
+    <span>备注文字：</span>
+    <textarea class="altText" placeholder="请在这里输入您的预约备注信息" ng-model="BookingInfo.Remark" ng-bind="tmp"></textarea>
+</div>
+
+<div class="opera"><a href="javascript:;" ng-click="Submit();" class="inlineBlock btn">确认预约</a></div>

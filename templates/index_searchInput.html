@@ -1,0 +1,12 @@
+
+<link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+<div id="filter" style="text-align:center;"><span class="search"><input type="text" placeholder="请输入要搜索的内容" class="searchInput" ng-model="search_key" /><b ng-click="do_search();"></b></span></div>
+<div class="searchList" ng-show="show_result">
+    <ul>
+        <li ng-click="_goto('gym_list');">运动场馆 <b ng-bind="result.GymTotal"></b></li>
+        <li ng-click="_goto('club_list');">俱乐部 <b ng-bind="result.ClubTotal"></b></li>
+        <li ng-click="_goto('coach_list');">教练 <b ng-bind="result.CoachTotal"></b></li>
+        <li ng-click="_goto('article_list');">推荐文章 <b ng-bind="result.ArticleTotal"></b></li>
+    </ul>
+    <p>请在此选择要搜索的类型</p>
+</div>

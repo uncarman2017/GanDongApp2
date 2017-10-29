@@ -1,0 +1,57 @@
+
+<div id="filter">
+    <span class="oneif teachLength" ng-click="show_position=!show_position; show_category=false">
+        <b></b><i ng-bind="search.selected_position.ItemText"></i>
+    </span>
+    <!-- <span class="twoif allitems" ng-click="show_category=!show_category; show_position=false">
+        <b></b><i ng-bind="search.selected_category.DistrictName">全部分类</i>
+    </span> -->
+    <span class="threeif searh">
+        <input type="text" />
+        <b></b>
+    </span>
+</div>
+
+<div class="options" ng-show="show_position">
+    <p class="thisTitle"><b></b>选择位置</p>
+    <div class="items">
+        <span class="bor" ng-repeat="item in DicItempositionList" ng-bind="item.ItemText" ng-click="searchByPosition(item)">嘉定区</span>
+    </div>
+</div>
+
+<div class="options" ng-show="show_category">
+    <p class="thisTitle"><b></b>选择分类</p>
+    <div class="items">
+        <!--<span>羽毛球馆</span>
+    <span class="bor">游泳馆</span>
+    <span>武道馆</span>-->
+        <span class="bor" ng-repeat="item in DicItemcategoryList" ng-bind="item.ItemText" ng-click="searchByCategory(item)"></span>
+    </div>
+</div>
+
+<div id="content" ng-click="show_category=false; show_position=false">
+    <div class="dataList">
+        <div class="list clear" ng-repeat="club in items" ng-click="showClubDetail(club);">
+            <span class="icon"></span>
+            <div class="showImg" ng-show="club.Photos.length>0">
+                <a><img ng-src="{{club.Photos[0]}}" /></a>
+            </div>
+            <div class="others">
+                <p  class="gymname" ng-bind="club.ClubName"></span></p>
+                <p class="levalmesg stars stars{{club.Level}}">
+                    <b class='s1'></b>
+                    <b class='s2'></b>
+                    <b class='s3'></b>
+                    <b class='s4'></b>
+                    <b class='s5'></b>
+                </p>
+                <p class="gymlMesg">
+                    <span class="place" ng-repeat="tag in club.Tags" ng-bind="tag">浦东新区</span>
+                </p>
+            </div>
+        </div>            
+    </div><!-- dataList END-->
+    <p class="loadMore" 
+        ng-show="total>items.length"
+        ng-click="get_more();"><span class="inlineBlock icon"></span>获取更多</p>
+</div><!-- content END-->

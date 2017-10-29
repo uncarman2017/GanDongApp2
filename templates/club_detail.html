@@ -1,0 +1,105 @@
+
+<div class="gymMesg">
+    <p class="gymname">
+        <span ng-bind="club.ClubName">上海浦东新区源生体育中心</span>
+        <span class="icons collectIcon" 
+            ng-class="is_collected ? 'collectedIcon' : ''"
+            ng-click="changeCollect(!is_collected)"></span>
+    </p>
+    <div class="tipmesg"><p class="inlineBlock levalmesg stars stars{{club.Level}}">
+        <b class="s1"></b>
+        <b class="s2"></b>
+        <b class="s3"></b>
+        <b class="s4"></b>
+        <b class="s5"></b>
+    </p><span class="value" ng-bind="Comm.AvarageScore">4.1</span><span class="talks">(<i ng-bind="Comm.Total"></i>人评价)</span><a class="goTalk">查看评价</a></div>
+</div>
+
+<div class="introduce showObj"> 
+    <p class="instrMesg ng-binding"><span ng-bind="club.ClubDesc"></span></p>
+</div>
+
+<div class="gymShow" ng-if="club.Photos.length>0">
+    <div class="imgList" ng-click="showPics(club.Photos);">
+        <a class="inlineBlock show left"></a><a class="inlineBlock show right"></a>
+        <div class="items">
+            <img ng-repeat="img in club.Photos" ng-src="{{img}}" alt="">
+        </div>
+    </div>
+</div>
+
+<div id="coach_list" class="gymShow">
+    <div class="dataList round">
+        <div class="title"><b class="inlineBlock"></b><strong>教练列表</strong></div>
+        <div class="list clear" ng-if="club.Coaches.length>0" ng-click="showCoach(coach);" ng-repeat="coach in club.Coaches">
+            <span class="icon"></span>
+            <div class="showImg"><a><img ng-src="{{coach.HeadPortraitUri}}" /></a></div>
+            <div class="others">
+                <p class="instrMesg">
+                    <span class="sexIcon"
+                        ng-class="{'1':'man', '2': ''}[coach.sex]"></span>
+                    <span class="name" ng-bind="coach.Name">陈经纶</span>
+                    <span class="leval">
+                        <b class="leval{{coach.Level}}"></b>
+                        五星教练
+                    </span>
+                </p>
+                <p class="instrMesg">
+                    <span ng-bind="coach.BriefIntroduction">陈经纶体育馆</span>
+                </p>
+                <p class="goodattags">
+                    <span ng-repeat="tag in coach.Courses" ng-bind="tag"></span>
+                </p>
+            </div>
+        </div>
+        <!--<div class="list clear"><span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/01.png" /></a></div>
+            <div class="others">
+                <p  class="gymname">三林体育中心</span></p>
+                <p class="veresIndro">这是一段描述体育馆的文字，这是一段描述体育馆的文字这是一段描述体育段描述体育馆的文字这是一段描述体育馆的文字</p>
+            </div>
+        </div>-->
+        <!--<div class="list clear listEnd"></div>-->            
+    </div><!--  dataList END -->
+</div>
+
+<div class="gymShow">
+    <div class="viptalk">
+        <div class="title"><b class="inlineBlock"></b><strong>会员评价</strong></div>
+        <div class="talkList" ng-if="Comm.Comments.length>0">
+            <div class="item" ng-repeat="com in Comm.Comments">
+                <div class="mesg">
+                    <a class="username" ng-bind="com.NickName">逗比程序猿</a>
+                    <p class="inlineBlock levalmesg stars stars{{com.Star}}">
+                        <b class="s1"></b>
+                        <b class="s2"></b>
+                        <b class="s3"></b>
+                        <b class="s4"></b>
+                        <b class="s5"></b>
+                    </p>
+                    <span class="time" ng-bind="com.CommentTime | date:'yyyy-MM-dd HH:mm:ss'">2015-02-23 14:26:58</span>
+                </div>
+                <p class="texts" ng-bind="com.Comment">很不错哦，里面环境非常好，教练也不错。使用场馆需要自带哪些东西，另外，场馆提供哪些东西呢？</p>
+            </div>
+            <!--<div class="item">
+            <div class="mesg"><a href="javascript:;" class="username">逗比程序猿</a><p class="inlineBlock levalmesg leval4"><b></b><i></i><a></a><span></span><strong></strong></p><span class="time">2015-02-23 14:26:58</span></div>
+            <p class="texts">很不错哦，里面环境非常好，教练也不错。使用场馆需要自带哪些东西，另外，场馆提供哪些东西呢？</p>
+        </div>
+        <div class="item">
+            <div class="mesg"><a href="javascript:;" class="username">逗比程序猿</a><p class="inlineBlock levalmesg leval1"><b></b><i></i><a></a><span></span><strong></strong></p><span class="time">2015-02-23 14:26:58</span></div>
+            <p class="texts">很不错哦，里面环境非常好，教练也不错。使用场馆需要自带哪些东西，另外，场馆提供哪些东西呢？</p>
+        </div> -->
+        </div>
+        <p ng-if="Commentslength<=0">
+            暂无评论
+        </p>
+        <a ng-click="submitComment();" href="javascript:;">发表评论</a>
+        <p class="loadMore" ng-show="!isEnd" ng-click="get_more();">
+            <span class="inlineBlock icon"></span>获取更多
+        </p>
+    </div>
+</div>
+
+<!-- <div class="bookCourse" ng-click="bookingCourse()"><a href="javascript:;" class="inlineBlock btn">预定课程</a><span class="inlineBlock status"></span></div> -->
+
+

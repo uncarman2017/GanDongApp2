@@ -1,0 +1,14 @@
+﻿
+<link href="css/course.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/person.css" rel="stylesheet" type="text/css" media="all" />
+
+<div class="myPicsShow">
+    <div class="imglist" ng-if="data.selected_pics.length>0">
+        <span class="item" 
+            ng-class="isEdit ? 'select' : ''"
+            ng-repeat="img in data.selected_pics">
+            <img src="{{img}}" />
+            <i ng-if="isEdit"></i>
+        </span>
+    </div>
+</div>

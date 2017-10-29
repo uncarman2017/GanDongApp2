@@ -1,0 +1,15 @@
+
+    <link href="css/person.css" rel="stylesheet" type="text/css" media="all"/>
+	<div class="personInfo infoHead">
+    	<span class="obj">头像：</span><div class="userImage"><a href="javascript:;"><img ng-src="User.HeadPortraitUri"></a></div><span class="icon"></span>
+    </div>
+    <div class="personInfo">
+    	<li class="item first"><span class="obj">昵称：</span><p class="text"><input type="text"  value="张三" ng-model="User.NickName" /></p></li>
+        <li class="item"><span class="obj">签名：</span><p class="text"><input type="text" value="个性签名好玩儿又靠谱的健身专家" ng-model="User.PersonalSign" /></p></li>
+        <li class="item"><span class="obj">性别：</span><p class="text option"><label><input type="radio" name="sex" ng-model="User.Sex" value="1"><b>男</b></label>
+            <label><input type="radio" name="sex" ng-model="User.Sex" value="0"><b>女</b></label></p></li>
+        <li class="item"><span class="obj">年龄：</span><p class="text"><input type="text" ng-model="User.Age" value="38岁" /></p></li>
+        <li class="item"><span class="obj">身高：</span><p class="text"><input type="number" ng-model="User.Height" value="175cm" /></p></li>
+        <li class="item"><span class="obj">体重：</span><p class="text"><input type="number" ng-model="User.Weight" value="67kg" /></p></li>
+    </div>
+    <div class="personInfo"><p><a href="javascript:;" class="opera backlist" ng-click="UpdateUserInfo()">保存修改</a></p></div>

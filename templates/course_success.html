@@ -1,0 +1,13 @@
+﻿<link href="css/course.css" rel="stylesheet" type="text/css" media="all" />
+<div class="courseHead">
+    <div class="userImage"><a href="javascript:;"><img ng-src="{{CourseDetail.CoachHeadPortraitUri}}" /></a></div>
+    <p class="instrMesg"><span class="sexIcon"></span><span class="name" ng-bind="CourseDetail.CoachName">陈思明</span><span class="leval"><b class="leval{{CourseDetail.CoachLevel}}"></b><span ng-switch="CourseDetail.CoachLevel"><span ng-switch-when="1">一</span><span ng-switch-when="2">二</span><span ng-switch-when="3">三</span><span ng-switch-when="4">四</span><span ng-switch-when="5">五</span></span>星教练</span></p>
+</div>
+<div class="courseMesg resultSucc">
+    <div class="result"><p><b class=" inlineBlock icon success"></b>恭喜您，预约成功</p></div>
+    <div class="notice"><p><span class="gray">请于</span><span ng-bind="CourseDetail.CourseDate.split('T')[0]"></span><span ng-bind="CourseDetail.CourseBeginTime"></span></p></div>
+    <div class="notice"><p><span class="gray">提前</span>30分钟<span class="gray">与对方联系，准备上课</span></p></div>
+    <div class="notice"><p><span class="gray">上课地址</span><span ng-bind="CourseDetail.GymAddress">徐汇区南浦大桥西侧</span></p></div>
+    <div class="notice"><p><span class="gray">联系电话</span><span ng-bind="CourseDetail.CoachPhone">13298989898</span></p></div>
+</div>
+<div class="opera" ng-click="goback()"><a href="javascript:;" class="btn submit">返回</a></div>

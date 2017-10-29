@@ -1,0 +1,228 @@
+﻿/*
+ *预约课程模块样式文件
+ */
+
+.clearfixed { clear:both; }
+
+#content{
+	width:100%;
+	padding:0 15px;
+}
+.courseHead{
+	padding:12px 15px;
+}
+
+.courseItem{
+	padding:5px 10px;
+	color:#666;position:relative;
+	background: url(../imgs/bgLing.jpg) 0 -0.5px #fff repeat-x;
+	line-height: 40px;
+}
+.first{ background:none;}
+.courseItem .tip{ margin:0 20px 0 0;}
+.courseItem .tip input,.courseItem .tip select{ width:33%;}
+.station{
+	font-size:16px;
+	height: 50px;
+}
+.station .point{
+	width:14px; height:20px;
+	background:url(../imgs/point.png) 0 0 no-repeat;
+	background-size:100% 200%;
+	margin:0 8px 0px 0;
+	vertical-align: middle;
+}
+.courseItem .icon {
+	width: 9px;
+	height: 16px;
+	background: url(../imgs/transRight.png) 0 0 no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right:10px;
+	top: 13px;
+}
+.station .icon{top:15px;}
+.courseHead .icon{
+	padding:0 20px 0 0;
+	background: url(../imgs/transRight.png) 57px 3px no-repeat;
+	background-size: 7px 14px;
+	position:absolute;
+	right:0;
+}
+.operaAxea label,
+.option label{
+	display:inline-block;*display:inline;*zoom:1;
+	padding:0 20px 0 0;
+	width:50%;
+}
+.operaAxea label input,
+.option label input{
+	position:relative;
+	margin:0 5px 0 0;
+	bottom:-2px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
+	width: 15px;
+	height: 15px;
+	-webkit-transition: all 0.15s ease-out 0;
+	-moz-transition: all 0.15s ease-out 0;
+	transition: all 0.15s ease-out 0;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	outline: none;
+}
+.short label{width:25%;}
+.operaAxea label input[type='radio'],
+.option label input[type='radio']{
+	background:url(../imgs/radio.png) 0 0 no-repeat;
+	background-size:100% 200%;
+}
+.operaAxea label input[type='checkbox'],
+.option label input[type='checkbox']{
+	background:url(../imgs/checkbox.png) 0 0 no-repeat;
+	background-size:100% 200%;
+}
+.operaAxea label input[type='radio']:checked,
+.option label input[type='radio']:checked{
+	background:url(../imgs/radio.png) 0 100% no-repeat;
+	background-size:100% 200%;
+}
+.operaAxea label input[type='checkbox']:checked,
+.option label input[type='checkbox']:checked{
+	background:url(../imgs/checkbox.png) 0 100% no-repeat;
+	background-size:100% 200%;
+}
+.courseItem .altText{
+	width:75%;
+	resize:none;
+	line-height:20px;
+	vertical-align:top;
+	color:#59595d;
+	padding: 10px 0;
+}
+.opera { width:100%; margin:20px 0; text-align:center;}
+.opera .btn{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	width:75%;
+	text-align:center;
+	height:35px;
+	line-height:35px;
+	font-size:15px;
+	border-radius:3px;
+}
+.opera .submit{
+	background:#2886c3;
+	color:#fff;
+}
+.opera .cancel{
+	background:#fff;
+	color:#2886c3;
+	border:solid #2886c3 1px;
+}
+
+.options{
+	width:100%;
+	background:#fff url(../imgs/bgLing_ccc.png) 0 -0.5px repeat-x;
+	margin-bottom: -1px;
+	/*border-top:solid #ccc 1px;
+	border-bottom:solid #ccc 1px;
+	position: relative;
+	top: -1px;*/
+}
+.options .thisTitle{
+	height:42px;
+	line-height:42px;
+	padding:0 0 0 20px;
+	font-size:16px;
+	color:#000;
+	background:url(../imgs/bgLing_ccc.png) 0 41.5px repeat-x;
+}
+.thisTitle b{
+	display:inline-block;*display:inline;*zoom:1;
+	width:22px; height:22px; margin:0 6px 0 0;
+	background:url(../imgs/venes.png) 0 42% no-repeat;
+	background-size:100% 600%;
+	position:relative;top:6px;
+}
+.options .items{}
+.options .items span{
+	display:inline-block;*display:inline;*zoom:1;
+	width:50%;height:42px;
+	line-height:42px;
+	padding:0 0 0 20px;	
+	background:url(../imgs/bgLing_ccc.png) 0 41.5px repeat-x;
+}
+.options .items .bor{border-right:solid #ccc 1px;}
+.courseItem .itemIcon{
+	display:inline-block;*display:inline;*zoom:1;
+	width:16px;height:16px;
+	margin:0 10px 0 0;
+	vertical-align:text-top;
+}
+.courseItem .itemText{color:#59595d; font-size:12px; vertical-align:top;}
+.phone .itemText{color:#1875ba; font-size:14px;}
+.phone .itemIcon{ background:url(../imgs/venes.png) 0 0 no-repeat; background-size:100% 600%;}
+.user .itemIcon{ background:url(../imgs/venes.png) 0 21% no-repeat; background-size:100% 600%;}
+.dateTime .itemIcon{ background:url(../imgs/venes.png) 0 42% no-repeat; background-size:100% 600%;}
+.adress .itemIcon{ background:url(../imgs/venes.png) 0 65% no-repeat; background-size:100% 543%;}
+.tips .itemIcon{ background:url(../imgs/venes.png) 0 87% no-repeat; background-size:100% 600%;}
+
+.operaAxea{
+	padding:20px 15px;
+	margin:20px 0;
+	background: url(../imgs/bgLing.jpg) 0 -0.5px #fff repeat-x;
+}
+.operaAxea .elses{
+	padding:0 15px;
+}
+.operaAxea .elses .item{
+	margin:5px 0;
+	line-height:18px;
+	color:#59595d;
+	font-size:12px;
+}
+.operaAxea label {width:100%; padding:0;}
+.elses .elsesTitle{ font-size:15px;}
+
+.courseMesg{background: url(../imgs/bgLing.jpg) 0 -0.5px #fff repeat-x; padding:15px 0 30px;}
+.courseMesg .result,
+.courseMesg .notice{
+	margin:10px 0;
+	text-align:center;
+	vertical-align:top;
+}
+.courseMesg .result p{color:#59595d; font-size:17px;vertical-align:top;}
+.courseMesg .notice p{color:#f7921c; font-size:13px;vertical-align:top;}
+.courseMesg .notice .gray{color:#929696;}
+.result .icon{
+	width:61px; height:72px;
+	background:url(../imgs/venesStatus.png) 0 0 ;
+	background-size:100% 200%;
+	margin:0 15px 0 0 ;
+	position:relative;
+	vertical-align:middle;
+}
+.result .success{
+	background:url(../imgs/venesStatus.png) 0 100% ;
+	background-size:100% 200%;
+}
+.result  .ico{ margin:35px 0 0;}
+.resultSucc{ padding-top:35px;}
+.resultSucc p{ font-size:16px; color:#f7921c;}
+.resultSucc p .gray{ font-size:12px; color:#929296;}
+.resultSucc p span{ margin:0 3px;}
+
+.venes_add .courseItem{
+	    background-img: url(../imgs/bgLing_ccc.png);
+}
+.venes_add .opera{ margin:0;}
+
+
+.noopera { background: none; padding: 0px; margin: 0px; margin-bottom: 25px; }
+.option .course_app_s { display: inline-block; width: auto; }

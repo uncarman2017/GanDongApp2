@@ -1,0 +1,66 @@
+
+<div id="filter">
+    <span class="oneif teachLength" ng-click="show_position=!show_position; show_category=false">
+        <b></b><i ng-bind="search.selected_position.ItemText"></i>
+    </span>
+    <span class="twoif allitems" ng-click="show_category=!show_category; show_position=false">
+        <b></b><i>全部分类</i>
+    </span>
+    <span class="threeif searh">
+        <input type="text" />
+        <b></b>
+    </span>
+</div>
+
+<div class="options" ng-show="show_position">
+    <p class="thisTitle"><b></b>获取当前位置</p>
+    <div class="items">
+        <span class="bor" ng-repeat="item in DicItempositionList" ng-bind="item.ItemText" ng-click="searchByPosition(item)">嘉定区</span>
+    </div>
+</div>
+
+<div class="options" ng-show="show_category">
+    <p class="thisTitle"><b></b>全部分类</p>
+    <div class="items">
+        <!--<span>羽毛球馆</span>
+    <span class="bor">游泳馆</span>
+    <span>武道馆</span>-->
+        <span class="bor" ng-repeat="item in DicItemcategoryList" ng-bind="item.ItemText" ng-click="searchByCategory(item)"></span>
+    </div>
+</div>
+
+<div id="content" ng-click="show_category=false; show_position=false">
+    <div class="dataList">
+        <div class="list clear" ng-repeat="gym in items" ng-click="showDetail(gym);">
+            <span class="icon"></span>
+            <div class="showImg" ng-show="gym.Photos.length>0">
+                <a><img ng-src="{{gym.Photos[0]}}" /></a>
+            </div>
+            <div class="others">
+                <p  class="gymname" ng-bind="gym.GymName">三林体育中心</span></p>
+                <p class="levalmesg stars stars{{gym.StarLevel}}">
+                    <b class='s1'></b>
+                    <b class='s2'></b>
+                    <b class='s3'></b>
+                    <b class='s4'></b>
+                    <b class='s5'></b>
+                </p>
+                <p class="gymlMesg">
+                    <span class="place" ng-repeat="tag in gym.Tags" ng-bind="tag">浦东新区</span>
+                </p>
+            </div>
+        </div>
+        <!--<div class="list clear"><span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/04.png" /></a></div>
+            <div class="others">
+                <p  class="gymname">三林体育中心</span></p>
+                <p class="levalmesg leval5"><b></b><i></i><a></a><span></span><strong></strong></p>
+                <p class="gymlMesg"><span class="place">浦东新区</span><span class="useway">运动健身</span></p>
+            </div>
+        </div>-->
+        <!--<div class="list clear listEnd"></div>-->            
+    </div><!-- dataList END-->
+    <p class="loadMore" 
+        ng-show="total>items.length"
+        ng-click="get_more();"><span class="inlineBlock icon"></span>获取更多</p>
+</div><!-- content END-->

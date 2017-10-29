@@ -1,0 +1,18 @@
+﻿<link href="css/base-full.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/list.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/course.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/person.css" rel="stylesheet" type="text/css" media="all"/>
+<!--     <div class="keywordSearch"><span class="alt">筛选时间：</span><span class="input"><input type="text" /></span><span class="oper"><a href="javascript:;" class="inlineBlock">搜索</a></span></div> -->
+    <div class="reservatioList">
+        <div class="item" ng-repeat="item in items | orderBy: '-CourseBeginTime'" ng-click="getCourseBookingDetail(item)">
+            <span class="inlineBlock icon"></span>
+            <p class="inlineBlock intal"><span class="status step{{item.BookingStatus}}"><span ng-switch="item.BookingStatus"><span ng-switch-when="0">新订</span><span ng-switch-when="1">已确认</span><span ng-switch-when="2">完成</span><span ng-switch-when="3">取消</span><span ng-switch-when="4">过期</span></span></span><span class="obj" ng-bind="item.CourseTypeName">游泳</span></p>
+            <p class="author">教练：<span ng-bind="item.CoachName">罗城</span><span ng-bind="item.Hours+'节课'">一节</span></p>
+            <p class="dateTime"><span class="date" ng-bind="item.CourseDate.split('T')[0]">2015-12-12</span><span class="time" ng-bind="item.CourseBeginTime+'~'+item.CourseEndTime">12:45:21</span></p>
+            <p class="notice">备注：<b ng-bind="item.Remark">我是备注文字我是备注文字我是备注文字我是备注文字我是俩打打安迪安迪哈安迪</b></p>
+        </div>
+        <div class="item"></div>
+    </div>
+    <p class="loadMore" 
+        ng-show="total>items.length"
+        ng-click="get_more();"><span class="inlineBlock icon"></span>获取更多</p>

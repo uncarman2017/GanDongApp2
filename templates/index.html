@@ -1,0 +1,140 @@
+
+<link href="css/index.css" rel="stylesheet" type="text/css" media="all" />
+<div id="filter">
+    <span class="oneif teachLength"><b></b><i ng-click="show_position=!show_position;" ng-bind="selected_position.ItemText"></i></span>
+    <span class="threeif searh index" ng-click="goto('index_searchInput');"><input type="text" placeholder="请输入要搜索的内容" /><b></b></span>
+</div>
+
+<div class="options" ng-show="show_position">
+    <p class="thisTitle"><b></b>获取当前位置</p>
+    <div class="items">
+        <span class="bor" ng-repeat="item in DicItempositionList" ng-bind="item.ItemText" ng-click="searchByPosition(item)"></span>
+    </div>
+</div>
+
+<!-- 轮播广告 -->
+<div id="banner_tabs" class="flexslider">
+    <ul class="slides" style="position: absolute;">
+        <li ng-repeat="picture in data.topics" style="width: {{li_width}}">
+            <a title="" target="_blank" href={{picture.Url?picture.Url:'#'}}>
+                <div style="background: url({{picture.Photo}}) no-repeat center center;background-size:auto 100%;" ng-swipe-left="bannerSlider.next()" ng-swipe-right="bannerSlider.prev()">
+                </div>
+            </a>
+        </li>
+    </ul>
+    <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+        <li ng-repeat="key in data.topics" ng-class="$index == 0?'active':''"><a></a></li>
+    </ol>
+</div>
+
+<div class="menu"><p class="gym" ng-click="goto('gym_list');"><b></b><i>场馆</i></p><p class="group" ng-click="goto('club_list');"><b></b><i>俱乐部</i></p><p class="instructor" ng-click="goto('coach_list');"><b></b><i>教练</i></p><!-- <p class="indro"><b></b><i>推荐</i></p> --></div>
+
+<!-- 
+<div class="model"><b class=" inlineBlock indro"></b>最新推荐</div>
+<div id="content">
+    <div class="dataList">
+        <div class="list clear">
+            <span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/01.png"></a></div>
+            <div class="others">
+                <p class="title">秋冬季锻炼应该注意的事项</p>
+                <p class="from">这是一段描述体育馆的文字</p>
+            </div>
+        </div>
+        <div class="list clear">
+            <span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/01.png"></a></div>
+            <div class="others">
+                <p class="title">三林体育中心</p>
+                <p class="from">这是一段描述体育馆的文字</p>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+<div class="model"><b class=" inlineBlock group"></b>场馆推荐</div>
+<div id="content" ng-click="show_position=false">
+    <div class="dataList">
+        <div class="list clear" ng-repeat="gym in topic_gym" ng-click="showGymDetail(gym);">
+            <span class="icon"></span>
+            <div class="showImg" ng-show="gym.Photos.length>0">
+                <a><img ng-src="{{gym.Photos[0]}}" /></a>
+            </div>
+            <div class="others">
+                <p  class="gymname" ng-bind="gym.GymName"></span></p>
+                <p class="levalmesg stars stars{{gym.StarLevel}}">
+                    <b class='s1'></b>
+                    <b class='s2'></b>
+                    <b class='s3'></b>
+                    <b class='s4'></b>
+                    <b class='s5'></b>
+                </p>
+                <p class="gymlMesg">
+                    <span class="place" ng-repeat="tag in gym.Tags" ng-bind="tag">浦东新区</span>
+                </p>
+            </div>
+        </div><!-- dataList END-->
+</div><!-- content END-->
+
+<div class="model"><b class=" inlineBlock group"></b>俱乐部推荐</div>
+<div id="content">
+    <div class="dataList">
+        <div class="list clear" ng-repeat="club in topic_club" ng-click="showClubDetail(club);">
+            <span class="icon"></span>
+            <div class="showImg" ng-show="club.Photos.length>0">
+                <a><img ng-src="{{club.Photos[0]}}" /></a>
+            </div>
+            <div class="others">
+                <p  class="gymname" ng-bind="club.ClubName"></span></p>
+                <p class="levalmesg stars stars{{club.StarLevel}}">
+                    <b class='s1'></b>
+                    <b class='s2'></b>
+                    <b class='s3'></b>
+                    <b class='s4'></b>
+                    <b class='s5'></b>
+                </p>
+                <p class="gymlMesg">
+                    <span class="place" ng-repeat="tag in club.Tags" ng-bind="tag">浦东新区</span>
+                </p>
+            </div>
+        </div>            
+    </div>
+</div>
+<!-- 
+<div id="content">
+    <div class="dataList">
+        <div class="list clear">
+            <span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/01.png"></a></div>
+            <div class="others">
+                <p class="title">俱乐部1的名字</p>
+                <p class="from">这是一段描述体育馆的文字</p>
+            </div>
+        </div>
+        <div class="list clear">
+            <span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/01.png"></a></div>
+            <div class="others">
+                <p class="title">俱乐部2的名字</p>
+                <p class="from">这是一段描述体育馆的文字</p>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<script>
+    $(function () {
+        animate();
+    })
+    function animate() {
+        var N = 0;
+        setInterval(function () {
+            N >= 4 ? N = 0 : '';
+            var NUM = N % 4;
+            $('.imgs').stop(false).animate({ left: (-100 * N + '%') }, 500);
+            $('.points a').eq(NUM).addClass('cur').siblings().removeClass('cur');
+            N++;
+        }, 3000)
+    }
+</script>

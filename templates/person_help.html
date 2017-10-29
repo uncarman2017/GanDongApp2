@@ -1,0 +1,22 @@
+
+<link href="css/person.css" rel="stylesheet" type="text/css" media="all" />
+<div id="filter">
+    <!-- <span class="search" style="position:absolute;width:69%;"><input type="text" placeholder="搜索内容" class="searchInput" /><b style="right:0;"></b></span> -->
+    <span class="question" ng-click="submitFeedback()"><a href="javascript:;">我要提问</a></span>
+</div>
+<div id="content">
+    <div class="queslist helplist">
+        <ul>
+            <li ng-repeat="item in items" ng-click="item.show=!item.show">
+                <a ng-bind="item.Title"></a>
+                <span class="icon"></span>
+                <p ng-show="item.show" ng-bind="item.Content"></p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<p class="loadMore" 
+        ng-show="total>items.length"
+        ng-click="get_more();"><span class="inlineBlock icon"></span>获取更多</p>
+</div>

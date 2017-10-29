@@ -1,0 +1,108 @@
+﻿/*
+ * 登录，注册，召回密码 模块样式 
+ */
+ .tipMesg{
+	 width:100%;
+	 padding:0 30px;
+	 height:42px;
+}
+.tipMesg p{
+	line-height:42px;
+	color:#f6921e;
+	font-size:13px;
+}
+#content{
+	 width:100%;
+	 padding:0 15px; 
+}
+.lineBot{
+	background:url(../imgs/bgLing.jpg) left 41.5px repeat-x;
+}
+.inputArea,.operaArea{
+	margin:0 0 20px 0;
+}
+.inputArea .inputItem{
+	height:42px;
+	line-height:42px;
+	padding:0 15px;
+	position:relative;
+	border-bottom: 1px solid #ddd;
+}
+.inputItem input{
+	color:#444;
+	border:none;
+	background:none;
+	font-size:13px;
+	width:100%;
+	height:22px;
+	line-height:22px;
+}
+.inputItem .getVercode{
+	width:100px;
+	height:30px;
+	line-height:30px;
+	text-align:center;
+	position:absolute;
+	right:0;top:6px;
+	border:solid #0078c9 1px;
+	color:#0078c9;
+	font-size:13px;
+	border-radius:3px;
+}
+.inputItem .notGetcode{
+	border-color:#CCC;
+	color:#CCC;
+}
+.inputArea .readPact{
+	margin:20px 0 ;
+	text-align:center;
+	height:14px;
+	line-height:14px;
+	vertical-align:top;
+}
+.readPact .checkbox{
+	width:14px;
+	height:14px;
+	background:url(../imgs/checkbox.png) 0 0 no-repeat;
+	background-size:14px 28px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.select .checkbox{
+	background:url(../imgs/checkbox.png) 0 -14px no-repeat;
+	background-size:14px 28px;
+}
+.readPact .servicePact{
+	font-size:13px;
+	margin:0 0 0 10px;
+	position:relative;
+	top:-2px;
+	color:#0078c9;
+}
+.operaArea p .subButton{
+	display: inline-block;
+	*display: inline;
+	*zoom:1;
+	width:100%;
+	height:40px;
+	background:#0078c9;
+	border-radius:4px;
+	text-align:center;
+	line-height:40px;
+	font-size:15px;
+	color:#fff;
+}
+.operaArea .breadOpera{
+	margin:20px 0 0;
+	text-align:right;
+	position:relative;
+	font-size:12px;
+}
+.breadOpera .left{
+	color:#0078c9;
+	position:absolute;
+	left:0;
+}
+.breadOpera .right{	
+	color:#6d6e70;
+}

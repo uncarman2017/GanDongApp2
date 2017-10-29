@@ -1,0 +1,113 @@
+
+<div class="gymMesg">
+    <p class="gymname">
+        <span ng-bind="gym.GymName">上海浦东新区源生体育中心</span>
+        <span class="icons collectIcon" 
+            ng-class="is_collected ? 'collectedIcon' : ''"
+            ng-click="changeCollect(!is_collected)"></span>
+    </p>
+    <div class="tipmesg"><p class="inlineBlock levalmesg stars stars{{gym.StarLevel}}">
+        <b class="s1"></b>
+        <b class="s2"></b>
+        <b class="s3"></b>
+        <b class="s4"></b>
+        <b class="s5"></b>
+    </p><span class="value" ng-bind="Comm.AvarageScore">4.1</span><span class="talks">(<i ng-bind="Comm.Total"></i>人评价)</span><a class="goTalk" ng-click="scroll('.viptalk')">查看评价</a></div>
+</div>
+<div class="gymShow" ng-if="gym.Photos.length>0">
+    <div class="imgList" ng-click="showPics(gym.Photos);">
+        <a href="javascript:;" class="inlineBlock show left"></a><a href="javascript:;" class="inlineBlock show right"></a>
+        <div class="items">
+            <img ng-repeat="img in gym.Photos" ng-src="{{img}}" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="gymShow station" ng-if="gym.GymAddress">
+    <b class="inlineBlock point"></b>
+    <i ng-bind="gym.GymAddress"></i>
+    <span class="inlineBlock icon"></span>
+</div>
+
+<div id="gym_clubs" class="gymShow" ng-if="gym.Clubs.length>0">
+    <div class="dataList">
+        <div class="list clear" ng-click="showClub(club);" ng-repeat="club in gym.Clubs">
+            <span class="icon"></span>
+            <div class="showImg" ng-if="club.Photos.length>0">
+                <a><img ng-src="{{club.Photos[0]}}" /></a>
+            </div>
+            <div class="others">
+                <p  class="gymname" ng-bind="club.ClubName">三林体育中心</span></p>
+                <p class="veresIndro" ng-bind="club.ClubDesc">这是一段描述体育馆的文字，这是一段描述体育馆的文字这是一段描述体育段描述体育馆的文字这是一段描述体育馆的文字</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gymShow gymDetail">
+    <div class="introduce">
+        <div class="item"><span>联系方式：</span><p class="contact" ng-bind="gym.Phone">021-65945236</p></div>
+        <div class="item"><span>营运时间：</span><p class="operat" ng-bind="gym.ServiceTime">夏令时(08:00 - 21:30) 冬令时(09:00 - 21:00) </p></div>
+    </div>
+    <div class="showObj" ng-if="gym.Tags">
+        <p class="goodattags">
+            <span ng-repeat="tag in gym.Tags" ng-bind="tag">游泳</span>
+        </p>
+    </div>        
+    <div class="showObj">
+        <span class="serviceIcon" ng-if="gym.IsFree"><i class="fa fa-jpy"></i>免费</span>
+        <span class="serviceIcon" ng-if="gym.HasWifi"><i class="fa fa-wifi"></i>全场Wifi</span>
+        <span class="serviceIcon" ng-if="gym.HasShower"><i class="fa fa-filter"></i>淋浴</span>
+        <span class="serviceIcon" ng-if="gym.HasParking"><i class="fa fa-car"></i>停车</span>
+        <span class="serviceIcon" ng-if="gym.HasDrink"><i class="fa fa-glass"></i>饮料</span>
+        <span class="serviceIcon" ng-if="gym.HasEquipmentRented"><i class="fa fa-share-alt
+"></i>出租器材</span>
+        <span class="serviceIcon" ng-if="gym.HasEquipmentSale"><i class="fa fa-shopping-basket"></i>售卖器材</span>
+    </div>
+    <div class="introduce showObj">
+        <div class="item"><span>停车位：</span><p class="stopped" ng-bind="gym.ParkingCount">100个</p></div>
+        <div class="item"><span>项目内容：</span><p class="objtext" ng-bind="gym.ProjectContent">这是一个值得关注的项目</p></div>
+        <div class="item"><span>其他杂项：</span><p class="otherobj" ng-bind="gym.OtherItems">请自带洗浴用品和水杯</p></div>
+    </div>
+</div>
+
+<div class="gymShow">
+    <div class="viptalk">
+        <div class="title"><b class="inlineBlock"></b><strong>会员评价</strong></div>
+        <div class="talkList" ng-if="Comm.Comments.length>0">
+            <div class="item" ng-repeat="com in Comm.Comments">
+                <div class="mesg">
+                    <a class="username" ng-bind="com.NickName">逗比程序猿</a>
+                    <p class="inlineBlock levalmesg stars stars{{com.Star}}">
+                        <b class="s1"></b>
+                        <b class="s2"></b>
+                        <b class="s3"></b>
+                        <b class="s4"></b>
+                        <b class="s5"></b>
+                    </p>
+                    <span class="time" ng-bind="com.CommentTime | date:'yyyy-MM-dd HH:mm:ss'">2015-02-23 14:26:58</span>
+                </div>
+                <p class="texts" ng-bind="com.Comment">很不错哦，里面环境非常好，教练也不错。使用场馆需要自带哪些东西，另外，场馆提供哪些东西呢？</p>
+            </div>
+            <!--<div class="item">
+            <div class="mesg"><a href="javascript:;" class="username">逗比程序猿</a><p class="inlineBlock levalmesg leval4"><b></b><i></i><a></a><span></span><strong></strong></p><span class="time">2015-02-23 14:26:58</span></div>
+            <p class="texts">很不错哦，里面环境非常好，教练也不错。使用场馆需要自带哪些东西，另外，场馆提供哪些东西呢？</p>
+        </div>
+        <div class="item">
+            <div class="mesg"><a href="javascript:;" class="username">逗比程序猿</a><p class="inlineBlock levalmesg leval1"><b></b><i></i><a></a><span></span><strong></strong></p><span class="time">2015-02-23 14:26:58</span></div>
+            <p class="texts">很不错哦，里面环境非常好，教练也不错。使用场馆需要自带哪些东西，另外，场馆提供哪些东西呢？</p>
+        </div> -->
+        </div>
+        <p ng-if="Commentslength<=0">
+            暂无评论
+        </p>
+        <a ng-click="submitComment();" href="javascript:;">发表评论</a>
+        <p class="loadMore" ng-show="!isEnd" ng-click="get_more();">
+            <span class="inlineBlock icon"></span>获取更多
+        </p>
+    </div>
+</div>
+
+<!-- <div class="bookCourse"><a class="inlineBlock btn" ng-click="bookingCourse();">预定课程</a><span class="inlineBlock status"></span></div> -->
+
+

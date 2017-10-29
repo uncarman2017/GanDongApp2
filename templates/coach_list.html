@@ -1,0 +1,67 @@
+
+<div id="filter">
+    <span class="oneif teachLength" ng-click="show_teachLevel=!show_teachLevel; show_category=false">
+        <b></b><i ng-bind="search.selected_teachLevel.LevelName">教练级别</i>
+    </span>
+    <span class="twoif allitems" ng-click="show_category=!show_category; show_teachLevel=false">
+        <b></b><i ng-bind="search.selected_category.CourseTypeName">全部分类</i>
+    </span>
+    <span class="threeif searh">
+      <input type="text" ng-model="search.search_name" />
+      <b ng-click="searchByName();"></b>
+    </span>
+</div>
+<div class="options" ng-show="show_teachLevel">
+    <p class="thisTitle"><b></b>教练级别</p>
+    <div class="items"><span class="bor" ng-repeat="myitem in search.teachLevel" ng-bind="myitem.LevelName" ng-click="searchByTeachLeveL(myitem)"></span></div>
+</div>
+<div class="options" ng-show="show_category">
+    <p class="thisTitle"><b></b>全部分类</p>
+    <div class="items"><span class="bor" ng-repeat="myitem in search.category" ng-bind="myitem.CourseTypeName" ng-click="searchByCourseType(myitem)">运动健身</span></div>
+</div>
+
+<div id="content">
+    <div class="dataList round">
+        <!--<div class="list clear listFirst">
+            <span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/05.png" /></a></div>
+            <div class="others">
+                <p class="instrMesg"><span class="sexIcon"></span><span class="name">陈思明</span><span class="leval"><b class="leval4"></b>四星教练</span></p>
+                <p class="instrMesg"><span class="age">教龄5年</span><span class="gymname">三林体育中心</span></p>
+                <p class="goodattags"><span>游泳</span><span>跳水</span><span>冲浪</span></p>
+            </div>
+        </div>
+        <div class="list clear">
+            <span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/02.png" /></a></div>
+            <div class="others">
+                <p class="instrMesg"><span class="sexIcon man"></span><span class="name">陈经纶</span><span class="leval"><b class="leval5"></b>五星教练</span></p>
+                <p class="instrMesg"><span class="age">教龄5年</span><span class="gymname">陈经纶体育馆</span></p>
+                <p class="goodattags"><span>游泳</span><span>跳水</span><span>冲浪</span></p>
+            </div>
+        </div>
+        <div class="list clear">
+            <span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="imgs/user/04.png" /></a></div>
+            <div class="others">
+                <p class="instrMesg"><span class="sexIcon man"></span><span class="name">Jake</span><span class="leval"><b class="leval3"></b>三星教练</span></p>
+                <p class="instrMesg"><span class="age">教龄5年</span><span class="gymname">源生体育中心</span></p>
+                <p class="goodattags"><span>游泳</span><span>跳水</span><span>冲浪</span></p>
+            </div>
+        </div>-->
+        <div class="list clear" ng-repeat="item in items" ng-click="showDetail(item)">
+            <span class="icon"></span>
+            <div class="showImg"><a href="javascript:;"><img src="{{item.HeadPortraitUri}}" /></a></div>
+            <div class="others">
+                <p class="instrMesg"><span class="sexIcon"  ng-class="{man:item.Sex==1}"></span><span class="name" ng-bind="item.Name">Jake</span><span class="leval"><b class="leval{{item.Level}}"></b><span ng-bind="{'1':'一','2':'二','3':'三','4':'四','5':'五'}[item.Level]"></span>星教练</span></p>
+                <p class="instrMesg"><span class="age">教龄<span ng-bind="item.Years">5</span>年</span><span class="gymname" ng-bind="item.GymDesc">源生体育中心</span></p>
+                <p class="goodattags"><span ng-repeat="subitem in item.Courses" ng-bind="subitem.CourseTypeName">游泳</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+<p class="loadMore" 
+        ng-show="total>items.length"
+        ng-click="get_more();"><span class="inlineBlock icon"></span>获取更多</p>
+</div>

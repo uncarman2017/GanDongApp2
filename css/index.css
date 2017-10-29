@@ -1,0 +1,51 @@
+﻿.banner{width:100%; overflow:hidden;}
+.banner .imgs{width:300%; overflow:hidden; position:relative; background:#2c8fe3;}
+.banerList{display:block;*display:1;*zoom:1; width:25%; float: left;}
+.banerList img{ width:100%; display: block;}
+.banner .points{position: relative; bottom:15px;text-align: center;}
+.points a{ display:inline-block;width:10px; height:10px; margin:0 2px; border-radius:5px; background:#fff; opacity:0.5;}
+.points a.cur{ background:#fff; opacity:1.0;}
+.menu{ width:100%; margin:10px 0 8px;}
+.menu p{ display:inline-block;*display:inline;*zoom:1; width:33%; text-align:center;}
+.menu p b,.menu p i{display:inline-block;*display:inline;*zoom:1;}
+.model b,
+.menu p b{width:30px; height:28px; vertical-align:top;}
+.menu p i{ width:100%; color:#adadad; font-size:14px;}
+.menu .gym b{ background:url(../imgs/indexIcon.png) 0 0 no-repeat; background-size:100% 400%;}
+.model b.group,
+.menu .group b{background:url(../imgs/indexIcon.png) 0 33% no-repeat; background-size:100% 400%;}
+.menu .instructor b{background:url(../imgs/indexIcon.png) 0 66% no-repeat; background-size:100% 400%;}
+.model b.indro,
+.menu .indro b{background:url(../imgs/indexIcon.png) 0 100% no-repeat; background-size:100% 400%;}
+.model{line-height:30px;width:100%; padding:10px 15px 0; margin:10px 0;    background: url(../imgs/bgLing_ccc.png) 0 -0.5px #fff repeat-x; font-size:16px; vertical-align:top;}
+.model b{ margin:6px 10px 0 0; width:20px; height:17px;}
+
+
+.searchList{
+	margin:10px 15px;
+	border:solid #e7e7e7 1px;
+	border-radius:3px;
+}
+
+.searchList li,
+.searchList p{
+	padding:0 0 0 15px;
+	height:40px; line-height:40px;
+	font-size:13px;
+	color:#5a5a5a;
+	text-align:left;
+	background: url(../imgs/bgLing_ccc.png) 0 39.5px #fff repeat-x;
+}
+.searchList p{ text-align:center; color:#949494; background:none;}
+
+/** 轮播广告 **/
+.flexslider { margin: 0 auto 5px; position: relative; width: 100%; height: 150px; overflow: hidden; zoom: 1; }
+.flexslider .slides li { width: 100%; height: 100%; float: left; }
+.flexslider:hover .flex-next:hover,.flexslider:hover .flex-prev:hover { opacity: 1; filter: alpha(opacity=50); }
+
+.flex-control-nav { width: auto; position: absolute; bottom: 0; text-align: center; z-index:1;margin: auto; left: 0; right: 0}
+.flex-control-nav li { margin: 0 8px; display: inline-block; zoom: 1; *display: inline; }
+.flex-control-paging li a { background: #fff; display: block; width: 10px; height: 10px; border-radius: 50%; overflow: hidden; text-indent: -99em; cursor: pointer;background-size:100%;opacity:.65; }
+.flex-control-paging li a.flex-active,.flex-control-paging li.active a { opacity:1; }
+.flexslider .slides a div { width: 100%; height:150px; display: block;margin:0 auto; }
+.flexslider .slides a{ display: block;overflow:hidden; }

@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2094A93F-30B8-41A8-9B7B-5C483E33E0DF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GanDongApp</RootNamespace>
+    <AssemblyName>GanDongApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml" />
+    <Content Include="css\base-full.css" />
+    <Content Include="css\comment.css" />
+    <Content Include="css\course.css" />
+    <Content Include="css\detail.css" />
+    <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\index.css" />
+    <Content Include="css\list.css" />
+    <Content Include="css\login.css" />
+    <Content Include="css\person.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="imgs\add.png" />
+    <Content Include="imgs\bg.jpg" />
+    <Content Include="imgs\bgLing.jpg" />
+    <Content Include="imgs\bgLing_ccc.png" />
+    <Content Include="imgs\checkbox.png" />
+    <Content Include="imgs\collect.png" />
+    <Content Include="imgs\default_face.jpg" />
+    <Content Include="imgs\delete.png" />
+    <Content Include="imgs\favicon.ico" />
+    <Content Include="imgs\fivestar.png" />
+    <Content Include="imgs\gantanhao.png" />
+    <Content Include="imgs\heart.png" />
+    <Content Include="imgs\iconlist.png" />
+    <Content Include="imgs\indexIcon.png" />
+    <Content Include="imgs\items.png" />
+    <Content Include="imgs\leval.png" />
+    <Content Include="imgs\loading.png" />
+    <Content Include="imgs\mesg.png" />
+    <Content Include="imgs\opera.png" />
+    <Content Include="imgs\option.png" />
+    <Content Include="imgs\point.png" />
+    <Content Include="imgs\radio.png" />
+    <Content Include="imgs\searh.png" />
+    <Content Include="imgs\serviceIcon.png" />
+    <Content Include="imgs\sex.png" />
+    <Content Include="imgs\trans.png" />
+    <Content Include="imgs\transRight.png" />
+    <Content Include="imgs\userinfo.png" />
+    <Content Include="imgs\user\01.png" />
+    <Content Include="imgs\user\02.png" />
+    <Content Include="imgs\user\03.png" />
+    <Content Include="imgs\user\04.png" />
+    <Content Include="imgs\user\05.png" />
+    <Content Include="imgs\user\banner01.png" />
+    <Content Include="imgs\venes.png" />
+    <Content Include="imgs\venesStatus.png" />
+    <Content Include="index.html" />
+    <Content Include="js\app.js" />
+    <Content Include="js\cityMesg-full.js" />
+    <Content Include="js\comm\angular-route.min.js" />
+    <Content Include="js\comm\angular.js" />
+    <Content Include="js\comm\appcan.control.js" />
+    <Content Include="js\comm\appcan.js" />
+    <Content Include="js\comm\china_city.js" />
+    <Content Include="js\comm\comm.js" />
+    <Content Include="js\comm\f.ui.dialog.js" />
+    <Content Include="js\comm\jquery-1.11.0.min.js" />
+    <Content Include="js\comm\jquery-1.8.3.min.js" />
+    <Content Include="js\comm\jquery.ajaxfileupload.js" />
+    <Content Include="js\comm\jquery.js" />
+    <Content Include="js\comm\moment.js" />
+    <Content Include="js\comm\slider.js" />
+    <Content Include="js\comm\upload_file.js" />
+    <Content Include="js\controllers.js" />
+    <Content Include="js\controllers\club_detail.js" />
+    <Content Include="js\controllers\club_list.js" />
+    <Content Include="js\controllers\coach_detail.js" />
+    <Content Include="js\controllers\coach_list.js" />
+    <Content Include="js\controllers\course_appointment.js" />
+    <Content Include="js\controllers\course_cancel.js" />
+    <Content Include="js\controllers\course_coach.js" />
+    <Content Include="js\controllers\course_error.js" />
+    <Content Include="js\controllers\course_load.js" />
+    <Content Include="js\controllers\course_success.js" />
+    <Content Include="js\controllers\forgetpwd_mobile.js" />
+    <Content Include="js\controllers\forgetpwd_setpwd.js" />
+    <Content Include="js\controllers\group_detail.js" />
+    <Content Include="js\controllers\gym_debug.js" />
+    <Content Include="js\controllers\gym_detail.js" />
+    <Content Include="js\controllers\gym_list.js" />
+    <Content Include="js\controllers\index.js" />
+    <Content Include="js\controllers\index_search.js" />
+    <Content Include="js\controllers\index_searchInput.js" />
+    <Content Include="js\controllers\login.js" />
+    <Content Include="js\controllers\person_center.js" />
+    <Content Include="js\controllers\person_feedback.js" />
+    <Content Include="js\controllers\person_help.js" />
+    <Content Include="js\controllers\person_myCollect.js" />
+    <Content Include="js\controllers\person_myComment.js" />
+    <Content Include="js\controllers\person_myInfo.js" />
+    <Content Include="js\controllers\person_myMesg.js" />
+    <Content Include="js\controllers\person_myPics.js" />
+    <Content Include="js\controllers\person_myReservation.js" />
+    <Content Include="js\controllers\person_reservationDetail.js" />
+    <Content Include="js\controllers\pics.js" />
+    <Content Include="js\controllers\regis_mobile.js" />
+    <Content Include="js\controllers\regis_setmesg.js" />
+    <Content Include="js\controllers\submit_comment.js" />
+    <Content Include="js\controllers\upload_file.js" />
+    <Content Include="js\models\check_mobile.js" />
+    <Content Include="start.html" />
+    <Content Include="templates\club_detail.html" />
+    <Content Include="templates\club_list.html" />
+    <Content Include="templates\coach_detail.html" />
+    <Content Include="templates\coach_list.html" />
+    <Content Include="templates\course_appointment.html" />
+    <Content Include="templates\course_cancel.html" />
+    <Content Include="templates\course_coach.html" />
+    <Content Include="templates\course_error.html" />
+    <Content Include="templates\course_load.html" />
+    <Content Include="templates\course_success.html" />
+    <Content Include="templates\forgetpwd_mobile.html" />
+    <Content Include="templates\forgetpwd_setpwd.html" />
+    <Content Include="templates\group_detail.html" />
+    <Content Include="templates\gym_debug.html" />
+    <Content Include="templates\gym_detail.html" />
+    <Content Include="templates\gym_list.html" />
+    <Content Include="templates\index.html" />
+    <Content Include="templates\index_search.html" />
+    <Content Include="templates\index_searchInput.html" />
+    <Content Include="templates\List.html" />
+    <Content Include="templates\login.html" />
+    <Content Include="templates\page.html" />
+    <Content Include="templates\person_center.html" />
+    <Content Include="templates\person_feedback.html" />
+    <Content Include="templates\person_help.html" />
+    <Content Include="templates\person_myCollect.html" />
+    <Content Include="templates\person_myComment.html" />
+    <Content Include="templates\person_myInfo.html" />
+    <Content Include="templates\person_myMesg.html" />
+    <Content Include="templates\person_myPics.html" />
+    <Content Include="templates\person_myReservation.html" />
+    <Content Include="templates\person_reservationDetail.html" />
+    <Content Include="templates\pics.html" />
+    <Content Include="templates\regis_mobile.html" />
+    <Content Include="templates\regis_setmesg.html" />
+    <Content Include="templates\submit_comment.html" />
+    <Content Include="templates\upload_file.html" />
+    <Content Include="templates\venes_add.html" />
+    <Content Include="templates\venes_comment.html" />
+    <Content Include="templates\venes_debug.html" />
+    <Content Include="templates\venes_detail.html" />
+    <Content Include="templates\venes_list.html" />
+    <Content Include="页面说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4578</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:4578/GandongApp</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

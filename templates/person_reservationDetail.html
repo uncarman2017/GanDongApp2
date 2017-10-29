@@ -1,0 +1,75 @@
+
+    <link href="css/person.css" rel="stylesheet" type="text/css" media="all"/>
+
+	<!-- 0-新订 1-教练已确认 2-完成 3-取消 4-过期  -->
+	<div class="progress step0">
+        <a ng-bind="{0:'申请中',1:'已确认',2:'已完成',3:'已取消',4:'已过期'}[BookingInfo.BookingStatus]"></a>
+    </div>
+
+    <!-- <div class="progress step{{BookingInfo.BookingStatus+1}}" ng-if="BookingInfo.BookingStatus==0">
+        <a>申请中</a><i>····</i><strong>已确认</strong><i>····</i><strong>已完成</strong>
+    </div>
+    <div class="progress step{{BookingInfo.BookingStatus+1}}" ng-if="BookingInfo.BookingStatus==1">
+        <span>申请中</span><b>····</b><a>已确认</a><i>····</i><strong>已完成</strong>
+    </div>
+    <div class="progress step{{BookingInfo.BookingStatus+1}}" ng-if="BookingInfo.BookingStatus>=2">
+        <span>申请中</span><b>····</b><span>已确认</span><b>····</b><a>已完成</a>
+    </div> -->
+
+    <div class="courseHead personCourse">
+        <div class="userImage">
+            <a href="javascript:;"><img ng-src="{{CoachHeadPortraitUri||settings.default_face}}"></a>
+        </div>
+        <p class="instrMesg">
+            <span class="sexIcon" ng-class="{'1':'man', '2': ''}[BookingInfo.CoachSex]"></span><span class="name" ng-bind="BookingInfo.CoachName">教练名</span>
+            <span class="leval">
+                <b class="leval{{BookingInfo.CoachLevel}}"></b>
+                <span ng-bind="{'1':'一','2':'二','3':'三','4':'四','5':'五'}[BookingInfo.CoachLevel]"></span>
+                星教练</span>
+        </p>
+    </div>
+    <div class="personInfo">
+    	<li class="item first">
+            <span class="obj">课长：</span>
+            <p class="text">
+                <input type="text" readonly="readonly" value="{{BookingInfo.Hours+'节课'}}" />
+            </p>
+        </li>
+        <li class="item">
+            <span class="obj">课程：</span>
+            <p class="text">
+                <input type="text" readonly="readonly" value="{{BookingInfo.CourseTypeName}}" value=""  />
+            </p>
+        </li>
+        <li class="item">
+            <span class="obj">预约日期：</span>
+            <p class="text">
+                <input type="text" readonly="readonly" value="{{BookingInfo.CourseDate.split('T')[0]}}" />
+            </p>
+        </li>
+        <li class="item">
+            <span class="obj">预约时间：</span>
+            <p class="text">
+                <input type="text" readonly="readonly" value="{{BookingInfo.CourseBeginTime+' - '+BookingInfo.CourseEndTime}}" />
+            </p>
+        </li>
+        <li class="item">
+            <span class="obj">上课地址：</span>
+            <p class="text">
+                <input type="text" readonly="readonly" value="{{BookingInfo.GymAddress}}"  />
+            </p>
+        </li>
+        <li class="item">
+            <span class="obj">备注文字：</span>
+            <p class="text">
+                <textarea ng-show="BookingInfo.BookingStatus!=3" readonly="readonly" ng-bind="BookingInfo.Remark"></textarea>
+                <textarea ng-show="BookingInfo.BookingStatus==3" readonly="readonly" ng-bind="BookingInfo.FailReason"></textarea>
+            </p>
+        </li>
+    </div>
+    <div class="personInfo">
+    	<li class="item first notice" ng-show="BookingInfo.BookingStatus<2"><span class="obj">备注文字：</span><p class="text">如果确认后，需要修改或取消，请和对方联系确认后再操作。</p></li>
+        <!--新订的和教练已确认的能修改和取消，已经完成，取消，过期的不能取消，修改-->
+        <p ng-if="BookingInfo.BookingStatus<=1"><a href="javascript:;" class="opera update" ng-click="update()">修改申请</a><a href="javascript:;" class="opera cancel" ng-click="cancelBooking()">取消申请</a></p>
+    </div>
+    <div class="personInfo"><a ng-click="gobackMyBookingList()" class="opera backlist">返回列表</a></div>
